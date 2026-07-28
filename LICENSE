@@ -1,0 +1,27 @@
+AI4I-EMS Challenge Evaluation and Institutional Pilot Licence
+
+Copyright (c) 2026 Farai Rashayi and AI4I-EMS contributors.
+
+Permission is granted to the AI for Impact Challenge organisers, judges,
+coaches, and authorised University of Zimbabwe reviewers to access, run,
+inspect, test, and reproduce the software and release-safe evidence in this
+repository for challenge evaluation, education, technical review, and
+institutional pilot planning.
+
+No permission is granted to:
+
+1. redistribute the confidential University of Zimbabwe source dataset;
+2. infer or publish private facility, meter, account, or tariff information;
+3. use the software to control mains-connected equipment without qualified
+   engineering review and institutional authorisation;
+4. represent public-source planning estimates as actual bills or realised
+   savings;
+5. represent the prototype as a commissioned production deployment.
+
+The software and evidence are provided "as is", without warranty of any kind,
+including fitness for electrical control, billing, safety-critical operation,
+or production deployment.
+
+Third-party packages remain subject to their own licences. The supplied study
+figures and institutional evidence remain subject to their source and data-use
+conditions.

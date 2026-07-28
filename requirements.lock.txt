@@ -1,0 +1,12 @@
+# Pinned direct dependencies for the full AI4I-EMS development and validation environment.
+# Transitive packages are resolved by pip for the supported Python versions.
+fastapi==0.139.0
+joblib==1.5.3
+matplotlib==3.11.0
+numpy==2.5.1
+pandas==3.0.3
+pydantic==2.13.4
+python-dotenv==1.2.2
+scikit-learn==1.9.0
+uvicorn==0.51.0
+openpyxl==3.1.5

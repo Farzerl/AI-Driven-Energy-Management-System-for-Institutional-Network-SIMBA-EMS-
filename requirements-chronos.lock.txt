@@ -1,0 +1,9 @@
+# Optional Chronos-2 training and inference stack.
+# Installed into the existing project .venv by INSTALL_AND_TRAIN_CHRONOS2.bat.
+chronos-forecasting[extras]==2.3.1
+peft>=0.17,<1
+accelerate>=1.0,<2
+pyarrow>=15,<25
+psutil>=5.9,<8
+openpyxl>=3.1,<4
+pytest>=8,<10

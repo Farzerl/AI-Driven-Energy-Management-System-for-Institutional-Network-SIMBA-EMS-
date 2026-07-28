@@ -1,0 +1,6 @@
+# Minimal pinned dependencies required to run the dashboard and API.
+fastapi==0.139.0
+numpy==2.5.1
+pandas==3.0.3
+pydantic==2.13.4
+uvicorn==0.51.0
