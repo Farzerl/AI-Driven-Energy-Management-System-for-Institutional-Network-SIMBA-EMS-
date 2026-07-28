@@ -1,0 +1,108 @@
+{
+  "generated_utc": "2026-07-25T21:45:52.876507+00:00",
+  "status": "pass",
+  "evidence_type": "software_in_the_loop_measured_replay",
+  "scenario": {
+    "scenario_id": "campus_peak_replay",
+    "name": "Campus morning peak replay",
+    "description": "A full-campus replay of the highest measured morning in the dataset. All 22 monitored facilities are included, with Central Kitchens highlighted as the largest controllable contributor.",
+    "start_time": "2025-10-29T05:00:00+02:00",
+    "campus_limit_kva": 1203.961,
+    "demonstration_goal": "Show the forecast identifying the next peak before a current-demand rule and prepare an operator-approved response without touching protected services.",
+    "observed_peak_kva": 1280.81,
+    "planning_limit_basis": "94% of the observed replay peak, used as a configurable operational reserve threshold",
+    "source": "authorised_half_hour_meter_data",
+    "interval_minutes": 30,
+    "facility_count": 22
+  },
+  "controllers": {
+    "no_control": {
+      "metrics": {
+        "completed_intervals": 16,
+        "baseline_peak_kva": 1280.81,
+        "controlled_peak_kva": 1280.81,
+        "peak_reduction_kva": 0.0,
+        "peak_reduction_percent": 0.0,
+        "baseline_energy_cost_usd": 1381.4024,
+        "controlled_energy_cost_usd": 1381.4024,
+        "energy_cost_difference_usd": 0.0,
+        "baseline_demand_charge_proxy_usd": 9964.7,
+        "controlled_demand_charge_proxy_usd": 9964.7,
+        "demand_charge_proxy_difference_usd": 0.0,
+        "approved_actions": 0,
+        "energy_shifted_kwh": 0.0,
+        "energy_curtailed_kwh": 0.0,
+        "critical_load_violations": 0,
+        "anomaly_escalations": 0,
+        "baseline_campus_limit_exceedances": 7,
+        "controlled_campus_limit_exceedances": 7,
+        "mean_inference_latency_ms": 4.4069,
+        "max_inference_latency_ms": 6.6017,
+        "claim_boundary": "Scenario cost and demand-charge values are software-in-the-loop planning proxies. They are not realised savings or a reproduced institutional invoice."
+      }
+    },
+    "simple_rule": {
+      "metrics": {
+        "completed_intervals": 16,
+        "baseline_peak_kva": 1280.81,
+        "controlled_peak_kva": 1264.124,
+        "peak_reduction_kva": 16.686,
+        "peak_reduction_percent": 1.3,
+        "baseline_energy_cost_usd": 1381.4024,
+        "controlled_energy_cost_usd": 1355.6159,
+        "energy_cost_difference_usd": 25.7865,
+        "baseline_demand_charge_proxy_usd": 9964.7,
+        "controlled_demand_charge_proxy_usd": 9834.88,
+        "demand_charge_proxy_difference_usd": 129.82,
+        "approved_actions": 19,
+        "energy_shifted_kwh": 145.076,
+        "energy_curtailed_kwh": 4.16,
+        "critical_load_violations": 0,
+        "anomaly_escalations": 0,
+        "baseline_campus_limit_exceedances": 7,
+        "controlled_campus_limit_exceedances": 5,
+        "mean_inference_latency_ms": 4.4882,
+        "max_inference_latency_ms": 9.9646,
+        "claim_boundary": "Scenario cost and demand-charge values are software-in-the-loop planning proxies. They are not realised savings or a reproduced institutional invoice."
+      }
+    },
+    "ai_assisted": {
+      "metrics": {
+        "completed_intervals": 16,
+        "baseline_peak_kva": 1280.81,
+        "controlled_peak_kva": 1262.047,
+        "peak_reduction_kva": 18.763,
+        "peak_reduction_percent": 1.46,
+        "baseline_energy_cost_usd": 1381.4024,
+        "controlled_energy_cost_usd": 1336.2752,
+        "energy_cost_difference_usd": 45.1272,
+        "baseline_demand_charge_proxy_usd": 9964.7,
+        "controlled_demand_charge_proxy_usd": 9818.73,
+        "demand_charge_proxy_difference_usd": 145.98,
+        "approved_actions": 23,
+        "energy_shifted_kwh": 341.586,
+        "energy_curtailed_kwh": 25.932,
+        "critical_load_violations": 0,
+        "anomaly_escalations": 0,
+        "baseline_campus_limit_exceedances": 7,
+        "controlled_campus_limit_exceedances": 3,
+        "mean_inference_latency_ms": 4.5466,
+        "max_inference_latency_ms": 16.0203,
+        "claim_boundary": "Scenario cost and demand-charge values are software-in-the-loop planning proxies. They are not realised savings or a reproduced institutional invoice."
+      }
+    }
+  },
+  "comparison": {
+    "ai_peak_reduction_vs_no_control_kva": 18.763,
+    "simple_peak_reduction_vs_no_control_kva": 16.686,
+    "ai_additional_peak_reduction_vs_simple_rule_kva": 2.077,
+    "all_critical_load_violations": 0,
+    "interpretation": "The forecast-assisted controller can schedule an approved action one interval before the current-demand rule. Results depend on the disclosed scenario response model and are planning evidence, not field savings."
+  },
+  "method": {
+    "baseline": "Measured full-campus half-hourly replay across 22 monitored facilities.",
+    "controller_isolation": "All controllers receive the same baseline. Only decision timing and action policy differ.",
+    "response_model": "Load-group partitions, action delay, protected floors and recovery are disclosed software-in-the-loop assumptions.",
+    "claim_boundary": "Results are repeatable planning evidence, not commissioned field savings."
+  }
+}

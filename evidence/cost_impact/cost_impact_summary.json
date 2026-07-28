@@ -1,0 +1,64 @@
+{
+  "status": "public_source_planning_estimate",
+  "currency": "USD",
+  "study_period": "2025-09-01 to 2026-04-30",
+  "months_modelled": 8,
+  "total_energy_kwh": 3753338.0,
+  "estimated_baseline_bill_usd": 603536.75,
+  "average_end_user_tariff_usd_per_kwh": 0.1608,
+  "estimated_monthly_bill_range_usd": {
+    "minimum": 50672.74,
+    "maximum": 90921.14
+  },
+  "estimated_peak_demand_range_kva": {
+    "minimum": 743.09,
+    "maximum": 1266.64
+  },
+  "scenarios": [
+    {
+      "scenario": "Conservative",
+      "peak_demand_reduction_fraction": 0.03,
+      "peak_to_standard_shift_fraction": 0.01,
+      "peak_to_offpeak_shift_fraction": 0.0,
+      "estimated_demand_charge_saving_usd": 2109.91,
+      "estimated_time_shift_saving_usd": 3839.66,
+      "estimated_total_saving_usd": 5949.57,
+      "estimated_saving_percent_of_baseline": 0.99
+    },
+    {
+      "scenario": "Central planning",
+      "peak_demand_reduction_fraction": 0.05,
+      "peak_to_standard_shift_fraction": 0.02,
+      "peak_to_offpeak_shift_fraction": 0.005,
+      "estimated_demand_charge_saving_usd": 3516.51,
+      "estimated_time_shift_saving_usd": 10653.85,
+      "estimated_total_saving_usd": 14170.36,
+      "estimated_saving_percent_of_baseline": 2.35
+    },
+    {
+      "scenario": "Stretch planning",
+      "peak_demand_reduction_fraction": 0.08,
+      "peak_to_standard_shift_fraction": 0.03,
+      "peak_to_offpeak_shift_fraction": 0.01,
+      "estimated_demand_charge_saving_usd": 5626.42,
+      "estimated_time_shift_saving_usd": 17468.04,
+      "estimated_total_saving_usd": 23094.46,
+      "estimated_saving_percent_of_baseline": 3.83
+    }
+  ],
+  "jan_2026_cost_breakdown": {
+    "peak_energy": 0.455,
+    "standard_energy": 0.28,
+    "off_peak_energy": 0.115,
+    "demand": 0.11,
+    "reactive": 0.04
+  },
+  "apr_2026_cost_breakdown": {
+    "peak_energy": 0.512,
+    "standard_energy": 0.243,
+    "off_peak_energy": 0.087,
+    "demand": 0.12,
+    "reactive": 0.038
+  },
+  "claim_boundary": "Planning estimate only. It does not reproduce or disclose the UZ utility bill. Savings require validation against the applicable account tariff, meter demand register and measured controllable-load response during a pilot."
+}
