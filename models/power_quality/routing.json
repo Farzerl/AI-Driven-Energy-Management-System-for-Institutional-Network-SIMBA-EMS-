@@ -1,0 +1,341 @@
+{
+  "available_variants": [
+    "official_base_zero_shot",
+    "source",
+    "power_quality_finetuned"
+  ],
+  "claim_boundary": "The raw archive column labelled reactive energy is recorded in kVAR and is treated as signed reactive power. Interval reactive energy is estimated as absolute kVAR multiplied by 0.5 hours. Billing-grade reactive energy and savings require meter-register and tariff reconciliation.",
+  "deployment_variant": "source",
+  "derived_outputs": [
+    "interval_energy_kwh",
+    "interval_reactive_energy_kvarh_estimated",
+    "power_factor",
+    "low_power_factor_risk",
+    "tariff_period_energy_cost_proxy"
+  ],
+  "eligible": true,
+  "generated_utc": "2026-07-28T14:21:23.212741+00:00",
+  "model_path": "models/chronos-2-finetuned",
+  "policy": {
+    "hybrid_weight_grid": [
+      0.15,
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.75,
+      0.85
+    ],
+    "maximum_low_pf_recall_drop": 0.02,
+    "minimum_power_quality_lora_improvement_percent": 0.0,
+    "minimum_validation_mae_improvement_percent": 0.5
+  },
+  "selected_by_target_horizon": {
+    "active_power_kw": {
+      "24_hours": {
+        "chronos_weight": 0.65,
+        "model": "hybrid_chronos_seasonal",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 1.5082,
+          "mean_bias": -0.0904,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 4.689,
+          "p90_abs_error": 3.4946,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 11.2059,
+          "rmse": 2.6517,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4504,
+          "unit": "kW",
+          "wape_percent": 7.9825
+        },
+        "validation_metrics": {
+          "mae": 1.3066,
+          "mean_bias": -0.013,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 3.9006,
+          "p90_abs_error": 2.8388,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 8.4396,
+          "rmse": 2.2759,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4795,
+          "unit": "kW",
+          "wape_percent": 7.0326
+        }
+      },
+      "2_hours": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.9735,
+          "mean_bias": -0.1885,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 2.9979,
+          "p90_abs_error": 2.1204,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 8.1737,
+          "rmse": 2.0787,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4488,
+          "unit": "kW",
+          "wape_percent": 5.3652
+        },
+        "validation_metrics": {
+          "mae": 1.0313,
+          "mean_bias": -0.3514,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 3.1722,
+          "p90_abs_error": 2.2772,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 8.145,
+          "rmse": 2.3034,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4076,
+          "unit": "kW",
+          "wape_percent": 5.8418
+        }
+      },
+      "30_minutes": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.6465,
+          "mean_bias": 0.0463,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 1.9932,
+          "p90_abs_error": 1.4477,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 5.2446,
+          "rmse": 1.1261,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5055,
+          "unit": "kW",
+          "wape_percent": 3.4775
+        },
+        "validation_metrics": {
+          "mae": 0.7074,
+          "mean_bias": -0.0087,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 2.1039,
+          "p90_abs_error": 1.5738,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 4.4197,
+          "rmse": 1.4665,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4897,
+          "unit": "kW",
+          "wape_percent": 3.8836
+        }
+      },
+      "6_hours": {
+        "chronos_weight": 0.65,
+        "model": "hybrid_chronos_seasonal",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 4.4434,
+          "mean_bias": 0.906,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 5.05,
+          "p90_abs_error": 13.2219,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 30.8895,
+          "rmse": 8.2676,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4961,
+          "unit": "kW",
+          "wape_percent": 11.8175
+        },
+        "validation_metrics": {
+          "mae": 4.577,
+          "mean_bias": 0.6189,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 5.4537,
+          "p90_abs_error": 13.737,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 34.8695,
+          "rmse": 8.9919,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4941,
+          "unit": "kW",
+          "wape_percent": 11.9849
+        }
+      }
+    },
+    "reactive_power_kvar": {
+      "24_hours": {
+        "chronos_weight": 0.65,
+        "model": "hybrid_chronos_seasonal",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 1.0488,
+          "mean_bias": 0.0374,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 3.7386,
+          "p90_abs_error": 2.9802,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 5.8643,
+          "rmse": 1.7766,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5512,
+          "unit": "kVAR",
+          "wape_percent": 13.7905
+        },
+        "validation_metrics": {
+          "mae": 1.0169,
+          "mean_bias": 0.0337,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 3.61,
+          "p90_abs_error": 2.4766,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 6.7797,
+          "rmse": 1.7798,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.5264,
+          "unit": "kVAR",
+          "wape_percent": 13.3983
+        }
+      },
+      "2_hours": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.5683,
+          "mean_bias": -0.056,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 2.0686,
+          "p90_abs_error": 1.2445,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 3.6906,
+          "rmse": 1.1348,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4787,
+          "unit": "kVAR",
+          "wape_percent": 7.523
+        },
+        "validation_metrics": {
+          "mae": 0.5246,
+          "mean_bias": -0.0584,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 1.8578,
+          "p90_abs_error": 1.262,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 3.3294,
+          "rmse": 1.0218,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4619,
+          "unit": "kVAR",
+          "wape_percent": 7.042
+        }
+      },
+      "30_minutes": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.3877,
+          "mean_bias": 0.027,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 1.3961,
+          "p90_abs_error": 0.8409,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 2.3619,
+          "rmse": 0.7567,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5433,
+          "unit": "kVAR",
+          "wape_percent": 4.9514
+        },
+        "validation_metrics": {
+          "mae": 0.423,
+          "mean_bias": -0.0141,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 1.467,
+          "p90_abs_error": 0.9538,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 3.1958,
+          "rmse": 0.9074,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.5425,
+          "unit": "kVAR",
+          "wape_percent": 5.471
+        }
+      },
+      "6_hours": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 1.284,
+          "mean_bias": 0.0165,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 4.7805,
+          "p90_abs_error": 2.9808,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 11.6247,
+          "rmse": 2.6105,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5134,
+          "unit": "kVAR",
+          "wape_percent": 16.5476
+        },
+        "validation_metrics": {
+          "mae": 1.2781,
+          "mean_bias": 0.0371,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 4.7665,
+          "p90_abs_error": 2.957,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 13.1663,
+          "rmse": 2.5299,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4941,
+          "unit": "kVAR",
+          "wape_percent": 17.167
+        }
+      }
+    }
+  },
+  "source_model_path": "models/chronos-2-finetuned",
+  "targets": [
+    "active_power_kw",
+    "reactive_power_kvar"
+  ],
+  "thresholds": {
+    "critical_power_factor": 0.85,
+    "low_power_factor": 0.95
+  },
+  "variant_selection": {
+    "improvement_percent": -0.1483,
+    "lora_low_pf_recall": 0.9921,
+    "lora_normalised_validation_score": 3.3522,
+    "low_pf_recall_drop": 0.0014,
+    "maximum_recall_drop": 0.02,
+    "minimum_improvement_percent": 0.0,
+    "reason": "The installed source Chronos model was retained because the power-quality LoRA model did not clear both validation and low-power-factor recall guardrails. The LoRA checkpoint and metrics remain available.",
+    "selected": "source",
+    "source_low_pf_recall": 0.9935,
+    "source_normalised_validation_score": 3.3472
+  },
+  "version": 1
+}

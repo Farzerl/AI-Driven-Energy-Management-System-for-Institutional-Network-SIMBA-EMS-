@@ -1,0 +1,37 @@
+{
+  "generated_utc": "2026-07-26T20:30:26.691523+00:00",
+  "benchmark_type": "four-horizon local inference",
+  "iterations": 100,
+  "model": {
+    "path": "models/institutional_multi_horizon_forecaster.json",
+    "included_files": [
+      "models/institutional_multi_horizon_forecaster.json",
+      "models/neural/ensemble_config.json",
+      "models/neural/lstm_forecaster.json",
+      "models/neural/transformer_forecaster.json"
+    ],
+    "bundle_size_bytes": 2580643,
+    "bundle_size_megabytes": 2.4611,
+    "model_name": "SIMBA Multi-Model Demand Forecaster",
+    "model_family": "Gradient boosting, LSTM, compact Transformer and validation-weighted hybrids",
+    "source": "validated_institutional_models"
+  },
+  "latency_ms": {
+    "median": 6.7911,
+    "mean": 6.9545,
+    "p95": 7.4665,
+    "maximum": 11.6258
+  },
+  "platform": {
+    "python": "3.13.5",
+    "system": "Linux",
+    "machine": "x86_64",
+    "processor": "not reported"
+  },
+  "edge_checks": {
+    "model_under_256_mb": true,
+    "p95_four_horizon_inference_under_250_ms": true
+  },
+  "scope_boundary": "The benchmark clears the prediction cache before every run and covers HGB, LSTM, Transformer and selected hybrid outputs for four horizons from one 49-interval facility history. It excludes API transport, browser rendering and full-campus plant response.",
+  "status": "pass"
+}

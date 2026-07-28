@@ -1,0 +1,51 @@
+{
+  "cleanup_pending": true,
+  "completed_utc": "2026-07-28T14:21:24.848492+00:00",
+  "config_sha256": "ec3cbca0dac7beb7ccf3e2d2225508efdeac3cffb423485f8b84623ab1d972b4",
+  "dataset_zip_sha256": "0767c3b3952ad4bfd3a8d1160904b3e9cb51e5d06f909dbb814e55a6491436a0",
+  "deployment_variant": "source",
+  "device": "cpu",
+  "force_requested": true,
+  "outputs": {
+    "deployed_model": "models/chronos-2-finetuned",
+    "metrics": "evidence/model_validation/power_quality_model_comparison.json",
+    "power_quality_model": "models/chronos-2-power-quality-finetuned",
+    "predictions": "evidence/model_validation/power_quality_predictions.csv",
+    "routing": "models/power_quality/routing.json"
+  },
+  "require_lora": true,
+  "setup_code_sha256": "8cb0920f954f2975632edf4abe2e3bbd4e1e868bf3a74d05de21489b9275ecfe",
+  "setup_transaction_version": 1,
+  "source_label": "demand_finetuned_source",
+  "source_model": "models/chronos-2-finetuned",
+  "source_model_config_sha256": "5d6679a9dc070e3ae6da23b8648ee48d85aa0f99b0ea7ecfeb453f32266c467f",
+  "source_model_extracted_from_zip": false,
+  "started_utc": "2026-07-28T12:37:45.062605+00:00",
+  "status": "success",
+  "training": {
+    "attempted": true,
+    "batch_size": 4,
+    "checkpoint_format": "merged_lora_full_model",
+    "checkpoint_path": "models/chronos-2-power-quality-finetuned",
+    "device": "cpu",
+    "duration_seconds": 1022.48,
+    "steps": 200,
+    "succeeded": true,
+    "targets": [
+      "active_power_kw",
+      "reactive_power_kvar"
+    ]
+  },
+  "variant_selection": {
+    "improvement_percent": -0.1483,
+    "lora_low_pf_recall": 0.9921,
+    "lora_normalised_validation_score": 3.3522,
+    "low_pf_recall_drop": 0.0014,
+    "maximum_recall_drop": 0.02,
+    "minimum_improvement_percent": 0.0,
+    "reason": "The installed source Chronos model was retained because the power-quality LoRA model did not clear both validation and low-power-factor recall guardrails. The LoRA checkpoint and metrics remain available.",
+    "selected": "source",
+    "source_low_pf_recall": 0.9935,
+    "source_normalised_validation_score": 3.3472
+  }
+}

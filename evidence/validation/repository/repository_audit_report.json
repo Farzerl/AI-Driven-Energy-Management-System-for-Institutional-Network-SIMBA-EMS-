@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-07-27T13:31:30.233946+00:00",
+  "status": "pass",
+  "files_checked": 203,
+  "package_size_bytes": 4862180,
+  "screenshot_count": 0,
+  "counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "findings": []
+}

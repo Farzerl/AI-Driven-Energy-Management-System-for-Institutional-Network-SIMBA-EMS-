@@ -1,0 +1,708 @@
+{
+  "submission_status": {
+    "prototype": "working multi-horizon forecasting API, operator dashboard and software-in-the-loop demonstration",
+    "tests": "automated tests included",
+    "cost_backtest": "public-source planning estimate complete; account tariff and realised savings require pilot verification",
+    "operating_mode": "advisory or operator-confirmed"
+  },
+  "dataset_quality": {
+    "facilities": 22,
+    "rows_after_grid_completion": 255350,
+    "forecast_usable_percent": 99.923693,
+    "date_start": "2025-09-01T00:00:00",
+    "date_end": "2026-04-30T23:30:00",
+    "missing_intervals": 7,
+    "partial_intervals": 56,
+    "negative_active_rows": 195,
+    "forecast_usable_rows": 255350
+  },
+  "forecast": {
+    "baseline": {
+      "mae_kva": 2.7294
+    },
+    "model": {
+      "mae_kva": 2.2878
+    },
+    "operational": {
+      "mae_kva": 2.2878
+    },
+    "improvement": {
+      "model_vs_persistence": {
+        "mae_reduction_percent": 16.18,
+        "rmse_reduction_percent": 0.0
+      }
+    },
+    "horizons": {
+      "30_minutes": {
+        "mae_kva": 2.2878,
+        "rmse_kva": 5.753,
+        "wape_percent": 6.705,
+        "r2": 0.9817,
+        "persistence_mae_kva": 2.7294,
+        "mae_improvement_vs_persistence_percent": 16.18,
+        "training_rows": 222659,
+        "test_rows": 31613
+      },
+      "2_hours": {
+        "mae_kva": 4.05,
+        "rmse_kva": 9.3723,
+        "wape_percent": 11.86,
+        "r2": 0.9516,
+        "persistence_mae_kva": 7.3415,
+        "mae_improvement_vs_persistence_percent": 44.83,
+        "training_rows": 222659,
+        "test_rows": 31547
+      },
+      "6_hours": {
+        "mae_kva": 4.647,
+        "rmse_kva": 9.8582,
+        "wape_percent": 13.59,
+        "r2": 0.9465,
+        "persistence_mae_kva": 15.3397,
+        "mae_improvement_vs_persistence_percent": 69.71,
+        "training_rows": 222659,
+        "test_rows": 31371
+      },
+      "24_hours": {
+        "mae_kva": 4.4698,
+        "rmse_kva": 9.9274,
+        "wape_percent": 13.138,
+        "r2": 0.9454,
+        "persistence_mae_kva": 5.4498,
+        "mae_improvement_vs_persistence_percent": 17.98,
+        "training_rows": 222659,
+        "test_rows": 30579
+      }
+    },
+    "rolling_validation": []
+  },
+  "peak_risk": {
+    "balanced_accuracy": 0.8084898557998752,
+    "macro_f1": 0.7331713509052494,
+    "actual_high_predicted_medium_or_high_recall": 0.9872734284612418,
+    "actual_high_predicted_low_miss_rate": 0.012726571538758195,
+    "confusion_matrix": [
+      [
+        23734,
+        2682,
+        165
+      ],
+      [
+        138,
+        1824,
+        434
+      ],
+      [
+        33,
+        560,
+        2000
+      ]
+    ]
+  },
+  "controller_comparison": {
+    "evidence_type": "authorised-data aggregate 30-minute risk-controller comparison; interval predictions are not included",
+    "source_sha256": "19b11e44232589cd5b85448e30fdd360ce2087ae3aaa6995e49c602fad43f45c",
+    "forecast_benchmark_source": "evidence/model_validation/institutional_multi_horizon_metrics.json",
+    "test_period": {
+      "start": "2026-04-01T00:00:00+02:00",
+      "end": "2026-04-30T23:30:00+02:00",
+      "rows": 31613
+    },
+    "controller_definitions": {
+      "simple_rule_controller": "Uses current facility utilisation only. Medium warning at 85% and high warning at 95% of the training-only facility limit.",
+      "forecast_assisted_controller": "Uses the validated 30-minute demand forecast and facility planning limit to classify the next half-hour as low, medium, or high.",
+      "action_definition": "An operator preparation action is raised for medium or high risk.",
+      "exceedance_proxy": "The comparison measures warning quality and action burden. Avoided kVA is evaluated separately in the disclosed software-in-the-loop scenarios."
+    },
+    "simple_rule_controller": {
+      "n": 31570,
+      "balanced_accuracy": 0.7313253130320686,
+      "macro_f1": 0.7313253130320684,
+      "action_rate_percent": 15.802977510294584,
+      "action_precision_nonlow": 0.8099819603126879,
+      "false_action_rate_on_actual_low": 0.03566457243896016,
+      "high_exact_precision": 0.7450829155418435,
+      "high_exact_recall": 0.7450829155418435,
+      "high_warning_recall_medium_or_high": 0.9251831854994215,
+      "critical_high_to_low_miss_rate": 0.07481681450057848,
+      "critical_high_to_low_miss_count": 194,
+      "actual_high_count": 2593,
+      "confusion_matrix_labels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "confusion_matrix": [
+        [
+          25633,
+          768,
+          180
+        ],
+        [
+          754,
+          1161,
+          481
+        ],
+        [
+          194,
+          467,
+          1932
+        ]
+      ],
+      "classification_report": {
+        "low": {
+          "precision": 0.9643354275610398,
+          "recall": 0.9643354275610398,
+          "f1-score": 0.9643354275610398,
+          "support": 26581.0
+        },
+        "medium": {
+          "precision": 0.4845575959933222,
+          "recall": 0.4845575959933222,
+          "f1-score": 0.4845575959933222,
+          "support": 2396.0
+        },
+        "high": {
+          "precision": 0.7450829155418435,
+          "recall": 0.7450829155418435,
+          "f1-score": 0.7450829155418435,
+          "support": 2593.0
+        },
+        "accuracy": 0.9099144757681343,
+        "macro avg": {
+          "precision": 0.7313253130320684,
+          "recall": 0.7313253130320684,
+          "f1-score": 0.7313253130320684,
+          "support": 31570.0
+        },
+        "weighted avg": {
+          "precision": 0.9099144757681343,
+          "recall": 0.9099144757681343,
+          "f1-score": 0.9099144757681343,
+          "support": 31570.0
+        }
+      },
+      "exceedance_proxy_capture_percent": 96.1048377340669
+    },
+    "forecast_assisted_controller": {
+      "n": 31570,
+      "balanced_accuracy": 0.8084898557998752,
+      "macro_f1": 0.7331713509052494,
+      "action_rate_percent": 24.27937915742794,
+      "action_precision_nonlow": 0.6285714285714286,
+      "false_action_rate_on_actual_low": 0.10710657988788985,
+      "high_exact_precision": 0.7695267410542517,
+      "high_exact_recall": 0.7713073659853451,
+      "high_warning_recall_medium_or_high": 0.9872734284612418,
+      "critical_high_to_low_miss_rate": 0.012726571538758195,
+      "critical_high_to_low_miss_count": 33,
+      "actual_high_count": 2593,
+      "confusion_matrix_labels": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "confusion_matrix": [
+        [
+          23734,
+          2682,
+          165
+        ],
+        [
+          138,
+          1824,
+          434
+        ],
+        [
+          33,
+          560,
+          2000
+        ]
+      ],
+      "classification_report": {
+        "low": {
+          "precision": 0.9928466847939762,
+          "recall": 0.8928934201121101,
+          "f1-score": 0.9402210513805808,
+          "support": 26581.0
+        },
+        "medium": {
+          "precision": 0.3600473746545598,
+          "recall": 0.7612687813021702,
+          "f1-score": 0.48887697668185476,
+          "support": 2396.0
+        },
+        "high": {
+          "precision": 0.7695267410542517,
+          "recall": 0.7713073659853451,
+          "f1-score": 0.7704160246533128,
+          "support": 2593.0
+        },
+        "accuracy": 0.8729173265758632,
+        "macro avg": {
+          "precision": 0.7074736001675959,
+          "recall": 0.8084898557998752,
+          "f1-score": 0.7331713509052494,
+          "support": 31570.0
+        },
+        "weighted avg": {
+          "precision": 0.9264781145940665,
+          "recall": 0.8729173265758632,
+          "f1-score": 0.8920194410770663,
+          "support": 31570.0
+        }
+      }
+    },
+    "comparison": {
+      "critical_miss_rate_reduction_percentage_points": 6.209024296182028,
+      "critical_misses_avoided": 161,
+      "high_warning_recall_gain_percentage_points": 6.209024296182031,
+      "additional_action_rate_percentage_points": 8.476401647133356,
+      "additional_false_action_rate_percentage_points": 7.14420074489297
+    },
+    "decision": {
+      "submission_claim": "Forecast assistance reduces critical high-to-low misses compared with a simple present-demand rule, while increasing the number of advisory alerts.",
+      "operating_mode": "advisory or operator-confirmed; automatic switching is disabled"
+    },
+    "limitations": [
+      "The comparison evaluates warning quality, not realised financial savings.",
+      "Facility response is evaluated in the software-in-the-loop scenarios, not in this historical warning benchmark.",
+      "Tariff rates are handled by the separate planning-cost model."
+    ]
+  },
+  "aggregate_visualisation_data": {
+    "status": "generated",
+    "source_sha256": "19b11e44232589cd5b85448e30fdd360ce2087ae3aaa6995e49c602fad43f45c",
+    "privacy": {
+      "source_workbooks_included": false,
+      "exact_full_interval_archive_included": false,
+      "facility_names_from_study_included": true,
+      "normalization": "Campus profiles and heatmaps are normalized for clear cross-period comparison."
+    },
+    "monthly_energy_index": [
+      {
+        "month": "2025-09",
+        "energy_index": 112.704
+      },
+      {
+        "month": "2025-10",
+        "energy_index": 120.198
+      },
+      {
+        "month": "2025-11",
+        "energy_index": 110.851
+      },
+      {
+        "month": "2025-12",
+        "energy_index": 90.768
+      },
+      {
+        "month": "2026-01",
+        "energy_index": 64.695
+      },
+      {
+        "month": "2026-02",
+        "energy_index": 72.677
+      },
+      {
+        "month": "2026-03",
+        "energy_index": 117.227
+      },
+      {
+        "month": "2026-04",
+        "energy_index": 110.88
+      }
+    ],
+    "campus_demand_heatmap": {
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "slots": [
+        "00:00",
+        "02:00",
+        "04:00",
+        "06:00",
+        "08:00",
+        "10:00",
+        "12:00",
+        "14:00",
+        "16:00",
+        "18:00",
+        "20:00",
+        "22:00"
+      ],
+      "normalized_mean_kva": [
+        [
+          0.4227,
+          0.4153,
+          0.4379,
+          0.7995,
+          0.9092,
+          0.9694,
+          0.9457,
+          0.8655,
+          0.785,
+          0.7282,
+          0.5977,
+          0.4876
+        ],
+        [
+          0.4352,
+          0.4215,
+          0.4397,
+          0.8391,
+          0.9376,
+          0.9807,
+          0.9495,
+          0.874,
+          0.7454,
+          0.7088,
+          0.6126,
+          0.4931
+        ],
+        [
+          0.4376,
+          0.424,
+          0.4422,
+          0.8199,
+          0.8891,
+          0.9966,
+          0.9699,
+          0.864,
+          0.7873,
+          0.7358,
+          0.6152,
+          0.4815
+        ],
+        [
+          0.4374,
+          0.4223,
+          0.4515,
+          0.8383,
+          0.9459,
+          0.9807,
+          0.9509,
+          0.8694,
+          0.7813,
+          0.7187,
+          0.583,
+          0.4808
+        ],
+        [
+          0.4349,
+          0.4193,
+          0.4476,
+          0.8189,
+          0.9205,
+          0.9664,
+          0.8924,
+          0.8347,
+          0.7264,
+          0.7037,
+          0.5583,
+          0.4549
+        ],
+        [
+          0.4262,
+          0.4144,
+          0.4268,
+          0.6878,
+          0.7474,
+          0.7315,
+          0.706,
+          0.6531,
+          0.6305,
+          0.6402,
+          0.5408,
+          0.459
+        ],
+        [
+          0.4236,
+          0.4133,
+          0.4351,
+          0.6572,
+          0.7299,
+          0.6986,
+          0.6725,
+          0.6202,
+          0.6418,
+          0.6549,
+          0.5519,
+          0.4686
+        ]
+      ]
+    },
+    "day_type_profiles": [
+      {
+        "day_type": "Weekday",
+        "time": "00:00",
+        "normalized_kva": 0.4424
+      },
+      {
+        "day_type": "Weekday",
+        "time": "02:00",
+        "normalized_kva": 0.4291
+      },
+      {
+        "day_type": "Weekday",
+        "time": "04:00",
+        "normalized_kva": 0.4528
+      },
+      {
+        "day_type": "Weekday",
+        "time": "06:00",
+        "normalized_kva": 0.84
+      },
+      {
+        "day_type": "Weekday",
+        "time": "08:00",
+        "normalized_kva": 0.9392
+      },
+      {
+        "day_type": "Weekday",
+        "time": "10:00",
+        "normalized_kva": 0.9988
+      },
+      {
+        "day_type": "Weekday",
+        "time": "12:00",
+        "normalized_kva": 0.9612
+      },
+      {
+        "day_type": "Weekday",
+        "time": "14:00",
+        "normalized_kva": 0.8793
+      },
+      {
+        "day_type": "Weekday",
+        "time": "16:00",
+        "normalized_kva": 0.7809
+      },
+      {
+        "day_type": "Weekday",
+        "time": "18:00",
+        "normalized_kva": 0.7338
+      },
+      {
+        "day_type": "Weekday",
+        "time": "20:00",
+        "normalized_kva": 0.6057
+      },
+      {
+        "day_type": "Weekday",
+        "time": "22:00",
+        "normalized_kva": 0.4896
+      },
+      {
+        "day_type": "Weekend",
+        "time": "00:00",
+        "normalized_kva": 0.5746
+      },
+      {
+        "day_type": "Weekend",
+        "time": "02:00",
+        "normalized_kva": 0.5597
+      },
+      {
+        "day_type": "Weekend",
+        "time": "04:00",
+        "normalized_kva": 0.5828
+      },
+      {
+        "day_type": "Weekend",
+        "time": "06:00",
+        "normalized_kva": 0.9095
+      },
+      {
+        "day_type": "Weekend",
+        "time": "08:00",
+        "normalized_kva": 0.999
+      },
+      {
+        "day_type": "Weekend",
+        "time": "10:00",
+        "normalized_kva": 0.9671
+      },
+      {
+        "day_type": "Weekend",
+        "time": "12:00",
+        "normalized_kva": 0.9321
+      },
+      {
+        "day_type": "Weekend",
+        "time": "14:00",
+        "normalized_kva": 0.861
+      },
+      {
+        "day_type": "Weekend",
+        "time": "16:00",
+        "normalized_kva": 0.8603
+      },
+      {
+        "day_type": "Weekend",
+        "time": "18:00",
+        "normalized_kva": 0.8758
+      },
+      {
+        "day_type": "Weekend",
+        "time": "20:00",
+        "normalized_kva": 0.7388
+      },
+      {
+        "day_type": "Weekend",
+        "time": "22:00",
+        "normalized_kva": 0.6273
+      }
+    ],
+    "facility_aggregate_aliases": [
+      {
+        "facility": "Central Kitchens NC1 4",
+        "energy_share_percent": 23.318,
+        "mean_demand_index": 483.178,
+        "median_power_factor_abs": 1.0
+      },
+      {
+        "facility": "Senior Common Room",
+        "energy_share_percent": 9.319,
+        "mean_demand_index": 220.543,
+        "median_power_factor_abs": 0.86
+      },
+      {
+        "facility": "Library Rollo Drive",
+        "energy_share_percent": 8.489,
+        "mean_demand_index": 179.113,
+        "median_power_factor_abs": 0.98
+      },
+      {
+        "facility": "New Hall NC5",
+        "energy_share_percent": 6.041,
+        "mean_demand_index": 125.068,
+        "median_power_factor_abs": 1.0
+      },
+      {
+        "facility": "SU Building",
+        "energy_share_percent": 5.847,
+        "mean_demand_index": 121.323,
+        "median_power_factor_abs": 1.0
+      },
+      {
+        "facility": "Swinton",
+        "energy_share_percent": 5.765,
+        "mean_demand_index": 121.464,
+        "median_power_factor_abs": 0.99
+      },
+      {
+        "facility": "Vet Science",
+        "energy_share_percent": 4.82,
+        "mean_demand_index": 128.042,
+        "median_power_factor_abs": 0.77
+      },
+      {
+        "facility": "Agriculture 01",
+        "energy_share_percent": 4.699,
+        "mean_demand_index": 102.486,
+        "median_power_factor_abs": 0.94
+      },
+      {
+        "facility": "Engineering FEBE",
+        "energy_share_percent": 4.611,
+        "mean_demand_index": 99.596,
+        "median_power_factor_abs": 0.96
+      },
+      {
+        "facility": "Carr Saunders",
+        "energy_share_percent": 4.021,
+        "mean_demand_index": 90.07,
+        "median_power_factor_abs": 0.92
+      },
+      {
+        "facility": "Animal House",
+        "energy_share_percent": 3.929,
+        "mean_demand_index": 101.655,
+        "median_power_factor_abs": 0.78
+      },
+      {
+        "facility": "Admin",
+        "energy_share_percent": 3.828,
+        "mean_demand_index": 84.115,
+        "median_power_factor_abs": 0.91
+      },
+      {
+        "facility": "ICT Mathematics",
+        "energy_share_percent": 3.52,
+        "mean_demand_index": 74.097,
+        "median_power_factor_abs": 0.98
+      },
+      {
+        "facility": "Animal Vet 2",
+        "energy_share_percent": 2.406,
+        "mean_demand_index": 54.791,
+        "median_power_factor_abs": 0.89
+      },
+      {
+        "facility": "Biological Science",
+        "energy_share_percent": 2.213,
+        "mean_demand_index": 46.099,
+        "median_power_factor_abs": 0.99
+      },
+      {
+        "facility": "Timber Research",
+        "energy_share_percent": 1.555,
+        "mean_demand_index": 46.875,
+        "median_power_factor_abs": 0.74
+      },
+      {
+        "facility": "Langham 1",
+        "energy_share_percent": 1.261,
+        "mean_demand_index": 28.706,
+        "median_power_factor_abs": 0.91
+      },
+      {
+        "facility": "Art Design",
+        "energy_share_percent": 1.185,
+        "mean_demand_index": 25.427,
+        "median_power_factor_abs": 0.98
+      },
+      {
+        "facility": "Langham 2",
+        "energy_share_percent": 1.051,
+        "mean_demand_index": 22.333,
+        "median_power_factor_abs": 0.97
+      },
+      {
+        "facility": "EIE Maintenance Yard",
+        "energy_share_percent": 1.035,
+        "mean_demand_index": 21.409,
+        "median_power_factor_abs": 1.0
+      },
+      {
+        "facility": "Crop Science",
+        "energy_share_percent": 0.974,
+        "mean_demand_index": 20.357,
+        "median_power_factor_abs": 0.99
+      },
+      {
+        "facility": "Science Center",
+        "energy_share_percent": 0.113,
+        "mean_demand_index": 3.253,
+        "median_power_factor_abs": 0.74
+      }
+    ]
+  },
+  "software_in_the_loop_comparison": {
+    "source": "evidence/controller_comparison/software_in_the_loop_comparison.json",
+    "scenario_id": "campus_peak_replay",
+    "no_control_peak_kva": 1280.81,
+    "current_demand_rule_peak_kva": 1264.124,
+    "forecast_assisted_peak_kva": 1262.047,
+    "forecast_advantage_vs_rule_kva": 2.077,
+    "critical_load_violations": 0,
+    "claim_boundary": "Measured replay with disclosed software-in-the-loop response assumptions; not realised savings."
+  }
+}

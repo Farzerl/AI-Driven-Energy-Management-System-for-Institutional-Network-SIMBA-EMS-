@@ -1,0 +1,13 @@
+{
+  "generated_utc": "2026-07-26T20:30:00Z",
+  "status": "pass",
+  "checks": {
+    "deep_health": "pass",
+    "about_model_families": 7,
+    "admin_login": "pass",
+    "controlled_proof_test": "pass",
+    "idempotent_replay": "pass",
+    "conflicting_request_id_rejected": "pass",
+    "secret_sanitisation": "covered by automated tests"
+  }
+}

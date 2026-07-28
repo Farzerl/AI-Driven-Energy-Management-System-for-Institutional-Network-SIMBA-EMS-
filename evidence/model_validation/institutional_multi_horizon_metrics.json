@@ -1,0 +1,1108 @@
+{
+  "status": "pass",
+  "model_name": "SIMBA Multi-Horizon Demand Forecaster",
+  "model_family": "Chronologically tuned histogram gradient boosting with facility-level blending",
+  "training_period": {
+    "start": "2025-09-01 00:00:00 Africa/Harare",
+    "end": "2026-03-31 23:30:00 Africa/Harare"
+  },
+  "chronological_validation_period": {
+    "start": "2026-03-18 00:00:00 Africa/Harare",
+    "end": "2026-03-31 23:30:00 Africa/Harare"
+  },
+  "chronological_test_period": {
+    "start": "2026-04-01 00:00:00 Africa/Harare",
+    "end": "2026-04-30 23:30:00 Africa/Harare"
+  },
+  "data_quality": {
+    "clean_rows": 255350,
+    "facility_count": 22,
+    "interval_minutes": 30,
+    "kwh_measured_fraction": 1.0
+  },
+  "horizons": {
+    "30_minutes": {
+      "mae_kva": 2.2878,
+      "rmse_kva": 5.753,
+      "wape_percent": 6.705,
+      "r2": 0.9817,
+      "p90_abs_error_kva": 5.4316,
+      "p95_abs_error_kva": 9.1496,
+      "p99_abs_error_kva": 20.0094,
+      "mean_bias_kva": -0.0636,
+      "under_forecast_fraction": 0.4724,
+      "persistence_mae_kva": 2.7294,
+      "mae_improvement_vs_persistence_percent": 16.18,
+      "training_rows": 222659,
+      "validation_rows": 14764,
+      "test_rows": 31613,
+      "training_seconds": 35.44,
+      "uncertainty_coverage_target": 0.85,
+      "upper_margin_kva": 1.8297,
+      "high_risk_precision": 0.5154,
+      "high_risk_recall": 0.9166,
+      "high_risk_f1": 0.6598,
+      "classification": {
+        "precision": 0.5154,
+        "recall": 0.9166,
+        "f1": 0.6598,
+        "true_positive": 1704,
+        "false_positive": 1602,
+        "false_negative": 155,
+        "true_negative": 28152,
+        "positive_events": 1859,
+        "warning_events": 3306,
+        "alert_threshold_ratio": 0.91,
+        "actual_high_ratio": 0.95
+      },
+      "validation_classification": {
+        "precision": 0.4801,
+        "recall": 0.9013,
+        "f1": 0.6265,
+        "target_recall": 0.9,
+        "actual_high_ratio": 0.95
+      },
+      "selected_parameters": {
+        "learning_rate": 0.06,
+        "l2_regularization": 5.0,
+        "early_stopping": false,
+        "max_iter": 260,
+        "max_leaf_nodes": 47,
+        "min_samples_leaf": 60
+      },
+      "parameter_search": [
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 160,
+            "max_leaf_nodes": 63,
+            "min_samples_leaf": 40
+          },
+          "validation_mae_kva": 2.2666,
+          "iterations": 160
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 140,
+            "max_leaf_nodes": 31,
+            "min_samples_leaf": 35
+          },
+          "validation_mae_kva": 2.3144,
+          "iterations": 140
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 200,
+            "max_leaf_nodes": 63,
+            "min_samples_leaf": 45
+          },
+          "validation_mae_kva": 2.2537,
+          "iterations": 200
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 260,
+            "max_leaf_nodes": 47,
+            "min_samples_leaf": 60
+          },
+          "validation_mae_kva": 2.2486,
+          "iterations": 260
+        }
+      ],
+      "top_permutation_importance": {
+        "kva": 27.8479,
+        "kwh": 2.715307,
+        "mean_48": 1.008816,
+        "lag_48": 0.52092,
+        "hour_cos": 0.520698,
+        "lag_1": 0.346002,
+        "max_48": 0.338113,
+        "hour_sin": 0.295856,
+        "trend_1": 0.290235,
+        "slot": 0.177087,
+        "std_24": 0.148019,
+        "mean_2": 0.129083
+      }
+    },
+    "2_hours": {
+      "mae_kva": 4.05,
+      "rmse_kva": 9.3723,
+      "wape_percent": 11.86,
+      "r2": 0.9516,
+      "p90_abs_error_kva": 9.8686,
+      "p95_abs_error_kva": 15.2284,
+      "p99_abs_error_kva": 36.1191,
+      "mean_bias_kva": -0.0472,
+      "under_forecast_fraction": 0.4816,
+      "persistence_mae_kva": 7.3415,
+      "mae_improvement_vs_persistence_percent": 44.83,
+      "training_rows": 222659,
+      "validation_rows": 14764,
+      "test_rows": 31547,
+      "training_seconds": 23.05,
+      "uncertainty_coverage_target": 0.85,
+      "upper_margin_kva": 3.2572,
+      "high_risk_precision": 0.2665,
+      "high_risk_recall": 0.8919,
+      "high_risk_f1": 0.4103,
+      "classification": {
+        "precision": 0.2665,
+        "recall": 0.8919,
+        "f1": 0.4103,
+        "true_positive": 1658,
+        "false_positive": 4564,
+        "false_negative": 201,
+        "true_negative": 25124,
+        "positive_events": 1859,
+        "warning_events": 6222,
+        "alert_threshold_ratio": 0.84,
+        "actual_high_ratio": 0.95
+      },
+      "validation_classification": {
+        "precision": 0.2737,
+        "recall": 0.9024,
+        "f1": 0.42,
+        "target_recall": 0.9,
+        "actual_high_ratio": 0.95
+      },
+      "selected_parameters": {
+        "learning_rate": 0.06,
+        "l2_regularization": 5.0,
+        "early_stopping": false,
+        "max_iter": 190,
+        "max_leaf_nodes": 47,
+        "min_samples_leaf": 60
+      },
+      "parameter_search": [
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 120,
+            "max_leaf_nodes": 63,
+            "min_samples_leaf": 40
+          },
+          "validation_mae_kva": 3.8298,
+          "iterations": 120
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 140,
+            "max_leaf_nodes": 31,
+            "min_samples_leaf": 50
+          },
+          "validation_mae_kva": 4.0269,
+          "iterations": 140
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 190,
+            "max_leaf_nodes": 47,
+            "min_samples_leaf": 60
+          },
+          "validation_mae_kva": 3.7987,
+          "iterations": 190
+        }
+      ],
+      "top_permutation_importance": {
+        "kva": 15.028999,
+        "mean_48": 7.980521,
+        "max_48": 6.267376,
+        "hour_cos": 3.701132,
+        "hour_sin": 1.174196,
+        "slot": 1.118229,
+        "std_48": 0.46903,
+        "max_24": 0.279129,
+        "mean_12": 0.277919,
+        "min_48": 0.245656,
+        "mean_24": 0.187649,
+        "dow_sin": 0.187085
+      }
+    },
+    "6_hours": {
+      "mae_kva": 4.647,
+      "rmse_kva": 9.8582,
+      "wape_percent": 13.59,
+      "r2": 0.9465,
+      "p90_abs_error_kva": 11.4347,
+      "p95_abs_error_kva": 17.5552,
+      "p99_abs_error_kva": 38.5197,
+      "mean_bias_kva": -0.2912,
+      "under_forecast_fraction": 0.4588,
+      "persistence_mae_kva": 15.3397,
+      "mae_improvement_vs_persistence_percent": 69.71,
+      "training_rows": 222659,
+      "validation_rows": 14764,
+      "test_rows": 31371,
+      "training_seconds": 24.02,
+      "uncertainty_coverage_target": 0.85,
+      "upper_margin_kva": 4.3366,
+      "high_risk_precision": 0.4241,
+      "high_risk_recall": 0.6247,
+      "high_risk_f1": 0.5052,
+      "classification": {
+        "precision": 0.4241,
+        "recall": 0.6247,
+        "f1": 0.5052,
+        "true_positive": 1160,
+        "false_positive": 1575,
+        "false_negative": 697,
+        "true_negative": 27939,
+        "positive_events": 1857,
+        "warning_events": 2735,
+        "alert_threshold_ratio": 0.96,
+        "actual_high_ratio": 0.95
+      },
+      "validation_classification": {
+        "precision": 0.4145,
+        "recall": 0.5685,
+        "f1": 0.4794,
+        "target_recall": 0.9,
+        "actual_high_ratio": 0.95
+      },
+      "selected_parameters": {
+        "learning_rate": 0.06,
+        "l2_regularization": 5.0,
+        "early_stopping": false,
+        "max_iter": 190,
+        "max_leaf_nodes": 47,
+        "min_samples_leaf": 80
+      },
+      "parameter_search": [
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 120,
+            "max_leaf_nodes": 63,
+            "min_samples_leaf": 40
+          },
+          "validation_mae_kva": 4.4343,
+          "iterations": 120
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 140,
+            "max_leaf_nodes": 31,
+            "min_samples_leaf": 65
+          },
+          "validation_mae_kva": 4.6705,
+          "iterations": 140
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 190,
+            "max_leaf_nodes": 47,
+            "min_samples_leaf": 80
+          },
+          "validation_mae_kva": 4.4017,
+          "iterations": 190
+        }
+      ],
+      "top_permutation_importance": {
+        "mean_48": 14.832312,
+        "hour_cos": 6.817342,
+        "std_24": 4.830653,
+        "max_48": 1.578489,
+        "std_48": 1.412146,
+        "min_48": 0.620689,
+        "hour_sin": 0.578524,
+        "slot": 0.48249,
+        "dow_sin": 0.455913,
+        "min_12": 0.409021,
+        "lag_48": 0.357481,
+        "dow_cos": 0.289828
+      }
+    },
+    "24_hours": {
+      "mae_kva": 4.4698,
+      "rmse_kva": 9.9274,
+      "wape_percent": 13.138,
+      "r2": 0.9454,
+      "p90_abs_error_kva": 11.0305,
+      "p95_abs_error_kva": 17.4402,
+      "p99_abs_error_kva": 39.1275,
+      "mean_bias_kva": -0.1803,
+      "under_forecast_fraction": 0.4577,
+      "persistence_mae_kva": 5.4498,
+      "mae_improvement_vs_persistence_percent": 17.98,
+      "training_rows": 222659,
+      "validation_rows": 14764,
+      "test_rows": 30579,
+      "training_seconds": 20.64,
+      "uncertainty_coverage_target": 0.85,
+      "upper_margin_kva": 4.0146,
+      "high_risk_precision": 0.2059,
+      "high_risk_recall": 0.8984,
+      "high_risk_f1": 0.335,
+      "classification": {
+        "precision": 0.2059,
+        "recall": 0.8984,
+        "f1": 0.335,
+        "true_positive": 1601,
+        "false_positive": 6175,
+        "false_negative": 181,
+        "true_negative": 22622,
+        "positive_events": 1782,
+        "warning_events": 7776,
+        "alert_threshold_ratio": 0.8,
+        "actual_high_ratio": 0.95
+      },
+      "validation_classification": {
+        "precision": 0.2168,
+        "recall": 0.9058,
+        "f1": 0.3499,
+        "target_recall": 0.9,
+        "actual_high_ratio": 0.95
+      },
+      "selected_parameters": {
+        "learning_rate": 0.06,
+        "l2_regularization": 5.0,
+        "early_stopping": false,
+        "max_iter": 120,
+        "max_leaf_nodes": 63,
+        "min_samples_leaf": 50
+      },
+      "parameter_search": [
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 120,
+            "max_leaf_nodes": 63,
+            "min_samples_leaf": 50
+          },
+          "validation_mae_kva": 4.1895,
+          "iterations": 120
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 140,
+            "max_leaf_nodes": 31,
+            "min_samples_leaf": 80
+          },
+          "validation_mae_kva": 4.3165,
+          "iterations": 140
+        },
+        {
+          "parameters": {
+            "learning_rate": 0.06,
+            "l2_regularization": 5.0,
+            "early_stopping": false,
+            "max_iter": 190,
+            "max_leaf_nodes": 47,
+            "min_samples_leaf": 100
+          },
+          "validation_mae_kva": 4.2183,
+          "iterations": 190
+        }
+      ],
+      "top_permutation_importance": {
+        "kva": 7.413519,
+        "lag_48": 4.390011,
+        "max_4": 3.595076,
+        "max_2": 2.235631,
+        "max_48": 2.139389,
+        "mean_48": 1.052404,
+        "hour_cos": 0.872005,
+        "mean_2": 0.734036,
+        "dow_sin": 0.672569,
+        "dow_cos": 0.348865,
+        "min_48": 0.333254,
+        "max_24": 0.231667
+      }
+    }
+  },
+  "per_facility": {
+    "Admin": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 1.6152,
+        "persistence_mae_kva": 1.8138,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.7657,
+        "persistence_mae_kva": 4.8419,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.4551,
+        "persistence_mae_kva": 11.5967,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.6279,
+        "persistence_mae_kva": 5.1048,
+        "beats_persistence": true
+      }
+    },
+    "Agriculture 01": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.3623,
+        "persistence_mae_kva": 1.6701,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.7103,
+        "persistence_mae_kva": 4.9068,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.354,
+        "persistence_mae_kva": 11.422,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.6186,
+        "persistence_mae_kva": 5.256,
+        "beats_persistence": true
+      }
+    },
+    "Animal House": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 1.1988,
+        "persistence_mae_kva": 1.3237,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.4669,
+        "persistence_mae_kva": 3.5478,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.3238,
+        "persistence_mae_kva": 7.2169,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.2555,
+        "persistence_mae_kva": 4.0697,
+        "beats_persistence": true
+      }
+    },
+    "Animal Vet 2": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 0.7314,
+        "persistence_mae_kva": 0.7775,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 0.5,
+        "mae_kva": 1.0957,
+        "persistence_mae_kva": 1.229,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 0.75,
+        "mae_kva": 1.2087,
+        "persistence_mae_kva": 1.9629,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 0.75,
+        "mae_kva": 1.1265,
+        "persistence_mae_kva": 1.2873,
+        "beats_persistence": true
+      }
+    },
+    "Art Design": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 0.9907,
+        "persistence_mae_kva": 1.0592,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.0094,
+        "persistence_mae_kva": 2.9051,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.5127,
+        "persistence_mae_kva": 6.0067,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.6461,
+        "persistence_mae_kva": 2.9883,
+        "beats_persistence": true
+      }
+    },
+    "Biological Science": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 0.9065,
+        "persistence_mae_kva": 0.9574,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.6672,
+        "persistence_mae_kva": 2.1971,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.9512,
+        "persistence_mae_kva": 4.2564,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.1657,
+        "persistence_mae_kva": 2.6977,
+        "beats_persistence": true
+      }
+    },
+    "Carr Saunders": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.4325,
+        "persistence_mae_kva": 3.0008,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 4.0204,
+        "persistence_mae_kva": 7.6801,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 4.31,
+        "persistence_mae_kva": 15.2794,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 0.5,
+        "mae_kva": 3.2471,
+        "persistence_mae_kva": 3.5651,
+        "beats_persistence": true
+      }
+    },
+    "Central Kitchens NC1 4": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 9.9818,
+        "persistence_mae_kva": 13.3273,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 17.3434,
+        "persistence_mae_kva": 40.9233,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 17.4748,
+        "persistence_mae_kva": 88.7492,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 0.75,
+        "mae_kva": 15.6626,
+        "persistence_mae_kva": 18.0532,
+        "beats_persistence": true
+      }
+    },
+    "Crop Science": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 0.3428,
+        "persistence_mae_kva": 0.3349,
+        "beats_persistence": false
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 0.8815,
+        "persistence_mae_kva": 0.9277,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.2639,
+        "persistence_mae_kva": 1.9728,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.2616,
+        "persistence_mae_kva": 1.4617,
+        "beats_persistence": true
+      }
+    },
+    "EIE Maintenance Yard": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 0.8162,
+        "persistence_mae_kva": 0.846,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.2803,
+        "persistence_mae_kva": 1.5596,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.4901,
+        "persistence_mae_kva": 2.417,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.3363,
+        "persistence_mae_kva": 1.597,
+        "beats_persistence": true
+      }
+    },
+    "Engineering FEBE": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 1.8154,
+        "persistence_mae_kva": 2.0016,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 4.0664,
+        "persistence_mae_kva": 5.6504,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 5.7217,
+        "persistence_mae_kva": 12.5084,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 5.1687,
+        "persistence_mae_kva": 5.9668,
+        "beats_persistence": true
+      }
+    },
+    "ICT Mathematics": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.6986,
+        "persistence_mae_kva": 1.909,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.764,
+        "persistence_mae_kva": 5.9752,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 5.2841,
+        "persistence_mae_kva": 13.057,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 4.9846,
+        "persistence_mae_kva": 6.702,
+        "beats_persistence": true
+      }
+    },
+    "Langham 1": {
+      "30_minutes": {
+        "rows": 1397,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.442,
+        "persistence_mae_kva": 1.5249,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1394,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.8093,
+        "persistence_mae_kva": 2.175,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1386,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.8436,
+        "persistence_mae_kva": 2.5299,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1350,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.9109,
+        "persistence_mae_kva": 2.3318,
+        "beats_persistence": true
+      }
+    },
+    "Langham 2": {
+      "30_minutes": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.6723,
+        "persistence_mae_kva": 1.7882,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1433,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.3842,
+        "persistence_mae_kva": 3.2677,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1425,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.3244,
+        "persistence_mae_kva": 4.6336,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1389,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.2002,
+        "persistence_mae_kva": 2.6116,
+        "beats_persistence": true
+      }
+    },
+    "Library Rollo Drive": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 2.913,
+        "persistence_mae_kva": 3.4148,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 5.9483,
+        "persistence_mae_kva": 10.3251,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 7.5777,
+        "persistence_mae_kva": 25.35,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 8.0797,
+        "persistence_mae_kva": 11.0368,
+        "beats_persistence": true
+      }
+    },
+    "New Hall NC5": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 4.7639,
+        "persistence_mae_kva": 6.3653,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 7.4917,
+        "persistence_mae_kva": 17.7899,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 7.898,
+        "persistence_mae_kva": 34.5442,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 7.3991,
+        "persistence_mae_kva": 8.8814,
+        "beats_persistence": true
+      }
+    },
+    "SU Building": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 3.9872,
+        "persistence_mae_kva": 4.8703,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 6.8804,
+        "persistence_mae_kva": 13.4068,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 8.2958,
+        "persistence_mae_kva": 31.1223,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 8.3687,
+        "persistence_mae_kva": 9.743,
+        "beats_persistence": true
+      }
+    },
+    "Science Center": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.0,
+        "mae_kva": 0.1747,
+        "persistence_mae_kva": 0.1747,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 0.0,
+        "mae_kva": 0.5014,
+        "persistence_mae_kva": 0.5014,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 0.8121,
+        "persistence_mae_kva": 1.2135,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 0.0,
+        "mae_kva": 0.7045,
+        "persistence_mae_kva": 0.7045,
+        "beats_persistence": true
+      }
+    },
+    "Senior Common Room": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 3.7413,
+        "persistence_mae_kva": 3.7374,
+        "beats_persistence": false
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 8.2086,
+        "persistence_mae_kva": 10.643,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 9.8155,
+        "persistence_mae_kva": 21.2257,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 0.75,
+        "mae_kva": 9.1737,
+        "persistence_mae_kva": 11.0191,
+        "beats_persistence": true
+      }
+    },
+    "Swinton": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 5.3031,
+        "persistence_mae_kva": 6.5151,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 7.9755,
+        "persistence_mae_kva": 16.2752,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 8.0789,
+        "persistence_mae_kva": 32.42,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 7.6391,
+        "persistence_mae_kva": 9.2186,
+        "beats_persistence": true
+      }
+    },
+    "Timber Research": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 0.75,
+        "mae_kva": 0.939,
+        "persistence_mae_kva": 1.0178,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 0.25,
+        "mae_kva": 1.4193,
+        "persistence_mae_kva": 1.5238,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 0.75,
+        "mae_kva": 1.5876,
+        "persistence_mae_kva": 2.3524,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 0.5,
+        "mae_kva": 1.6363,
+        "persistence_mae_kva": 1.914,
+        "beats_persistence": true
+      }
+    },
+    "Vet Science": {
+      "30_minutes": {
+        "rows": 1439,
+        "blend_alpha": 1.0,
+        "mae_kva": 1.4764,
+        "persistence_mae_kva": 1.5793,
+        "beats_persistence": true
+      },
+      "2_hours": {
+        "rows": 1436,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.3411,
+        "persistence_mae_kva": 3.1013,
+        "beats_persistence": true
+      },
+      "6_hours": {
+        "rows": 1428,
+        "blend_alpha": 1.0,
+        "mae_kva": 2.5637,
+        "persistence_mae_kva": 5.2378,
+        "beats_persistence": true
+      },
+      "24_hours": {
+        "rows": 1392,
+        "blend_alpha": 1.0,
+        "mae_kva": 3.0411,
+        "persistence_mae_kva": 3.5849,
+        "beats_persistence": true
+      }
+    }
+  },
+  "selection_note": "Hyperparameters, facility blending, uncertainty margins and alert thresholds were selected on the final two weeks of March. April 2026 remained untouched until the final held-out evaluation."
+}

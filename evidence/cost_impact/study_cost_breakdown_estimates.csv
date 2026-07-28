@@ -1,0 +1,11 @@
+month,component,share_percent,estimated_component_cost_usd
+Jan 2026,peak_energy,45.5,23056.1
+Jan 2026,standard_energy,28.0,14188.37
+Jan 2026,off_peak_energy,11.5,5827.37
+Jan 2026,demand,11.0,5574.0
+Jan 2026,reactive,4.0,2026.91
+Apr 2026,peak_energy,51.2,42012.3
+Apr 2026,standard_energy,24.3,19939.43
+Apr 2026,off_peak_energy,8.7,7138.81
+Apr 2026,demand,12.0,9846.63
+Apr 2026,reactive,3.8,3118.1

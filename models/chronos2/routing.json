@@ -1,0 +1,191 @@
+{
+  "available_variants": [
+    "base",
+    "finetuned"
+  ],
+  "deployment_variant": "finetuned",
+  "eligible": true,
+  "generated_utc": "2026-07-28T01:05:17.670463+00:00",
+  "policy": {
+    "hybrid_weight_grid": [
+      0.15,
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.75,
+      0.85
+    ],
+    "maximum_recall_drop": 0.02,
+    "minimum_finetuned_validation_mae_improvement_percent": 0.0,
+    "minimum_validation_mae_improvement_percent": 0.5
+  },
+  "selected_by_horizon": {
+    "24_hours": {
+      "chronos_weight": 0.35,
+      "model": "hybrid_chronos_existing",
+      "reason": "Chronos route met the validation improvement and recall guardrails.",
+      "source_candidate": "hybrid_chronos2_finetuned",
+      "test_metrics": {
+        "high_risk_events": 0,
+        "high_risk_f1": 0.0,
+        "high_risk_precision": 0.0,
+        "high_risk_recall": 0.0,
+        "mae_kva": 1.5853,
+        "mean_bias_kva": -0.0439,
+        "median_latency_ms_per_series": 747.9189,
+        "p90_abs_error_kva": 3.6743,
+        "p95_latency_ms_per_series": 764.9231,
+        "p99_abs_error_kva": 10.8291,
+        "rmse_kva": 2.6866,
+        "samples": 593,
+        "under_forecast_fraction": 0.4486,
+        "wape_percent": 7.1122
+      },
+      "validation_metrics": {
+        "high_risk_events": 0,
+        "high_risk_f1": 0.0,
+        "high_risk_precision": 0.0,
+        "high_risk_recall": 0.0,
+        "mae_kva": 1.4264,
+        "mean_bias_kva": -0.0822,
+        "median_latency_ms_per_series": 743.6644,
+        "p90_abs_error_kva": 3.4507,
+        "p95_latency_ms_per_series": 763.0569,
+        "p99_abs_error_kva": 8.0059,
+        "rmse_kva": 2.4457,
+        "samples": 632,
+        "under_forecast_fraction": 0.4367,
+        "wape_percent": 6.4626
+      }
+    },
+    "2_hours": {
+      "chronos_weight": 0.5,
+      "model": "hybrid_chronos_existing",
+      "reason": "Chronos route met the validation improvement and recall guardrails.",
+      "source_candidate": "hybrid_chronos2_finetuned",
+      "test_metrics": {
+        "high_risk_events": 0,
+        "high_risk_f1": 0.0,
+        "high_risk_precision": 0.0,
+        "high_risk_recall": 0.0,
+        "mae_kva": 1.0381,
+        "mean_bias_kva": -0.1376,
+        "median_latency_ms_per_series": 747.9189,
+        "p90_abs_error_kva": 2.2783,
+        "p95_latency_ms_per_series": 764.9231,
+        "p99_abs_error_kva": 6.7452,
+        "rmse_kva": 2.0718,
+        "samples": 593,
+        "under_forecast_fraction": 0.4553,
+        "wape_percent": 4.8377
+      },
+      "validation_metrics": {
+        "high_risk_events": 0,
+        "high_risk_f1": 0.0,
+        "high_risk_precision": 0.0,
+        "high_risk_recall": 0.0,
+        "mae_kva": 1.0346,
+        "mean_bias_kva": -0.24,
+        "median_latency_ms_per_series": 743.6644,
+        "p90_abs_error_kva": 2.194,
+        "p95_latency_ms_per_series": 763.0569,
+        "p99_abs_error_kva": 6.3238,
+        "rmse_kva": 2.1651,
+        "samples": 632,
+        "under_forecast_fraction": 0.4351,
+        "wape_percent": 4.9187
+      }
+    },
+    "30_minutes": {
+      "chronos_weight": 0.25,
+      "model": "hybrid_chronos_existing",
+      "reason": "Chronos route met the validation improvement and recall guardrails.",
+      "source_candidate": "hybrid_chronos2_finetuned",
+      "test_metrics": {
+        "high_risk_events": 0,
+        "high_risk_f1": 0.0,
+        "high_risk_precision": 0.0,
+        "high_risk_recall": 0.0,
+        "mae_kva": 0.5736,
+        "mean_bias_kva": 0.0036,
+        "median_latency_ms_per_series": 747.9189,
+        "p90_abs_error_kva": 1.3041,
+        "p95_latency_ms_per_series": 764.9231,
+        "p99_abs_error_kva": 3.2457,
+        "rmse_kva": 0.9779,
+        "samples": 593,
+        "under_forecast_fraction": 0.5194,
+        "wape_percent": 2.6053
+      },
+      "validation_metrics": {
+        "high_risk_events": 0,
+        "high_risk_f1": 0.0,
+        "high_risk_precision": 0.0,
+        "high_risk_recall": 0.0,
+        "mae_kva": 0.6106,
+        "mean_bias_kva": 0.0098,
+        "median_latency_ms_per_series": 743.6644,
+        "p90_abs_error_kva": 1.3703,
+        "p95_latency_ms_per_series": 763.0569,
+        "p99_abs_error_kva": 3.9554,
+        "rmse_kva": 1.1642,
+        "samples": 632,
+        "under_forecast_fraction": 0.5222,
+        "wape_percent": 2.8128
+      }
+    },
+    "6_hours": {
+      "chronos_weight": 0.75,
+      "model": "hybrid_chronos_existing",
+      "reason": "Chronos route met the validation improvement and recall guardrails.",
+      "source_candidate": "hybrid_chronos2_finetuned",
+      "test_metrics": {
+        "high_risk_events": 62,
+        "high_risk_f1": 0.7037,
+        "high_risk_precision": 0.57,
+        "high_risk_recall": 0.9194,
+        "mae_kva": 4.6078,
+        "mean_bias_kva": 0.8461,
+        "median_latency_ms_per_series": 747.9189,
+        "p90_abs_error_kva": 14.8149,
+        "p95_latency_ms_per_series": 764.9231,
+        "p99_abs_error_kva": 28.7249,
+        "rmse_kva": 8.1664,
+        "samples": 593,
+        "under_forecast_fraction": 0.4165,
+        "wape_percent": 11.0059
+      },
+      "validation_metrics": {
+        "high_risk_events": 66,
+        "high_risk_f1": 0.6471,
+        "high_risk_precision": 0.5288,
+        "high_risk_recall": 0.8333,
+        "mae_kva": 4.5666,
+        "mean_bias_kva": 0.5119,
+        "median_latency_ms_per_series": 743.6644,
+        "p90_abs_error_kva": 13.3026,
+        "p95_latency_ms_per_series": 763.0569,
+        "p99_abs_error_kva": 33.1218,
+        "rmse_kva": 8.5065,
+        "samples": 632,
+        "under_forecast_fraction": 0.4225,
+        "wape_percent": 10.7277
+      }
+    }
+  },
+  "variant_selection": {
+    "finetuned_mean_validation_mae_kva": 2.0364,
+    "finetuned_validation_high_risk_recall": 0.8485,
+    "horizon_wins": 3,
+    "maximum_recall_drop": 0.02,
+    "minimum_improvement_percent": 0.0,
+    "reason": "LoRA was selected because it improved mean chronological validation MAE without exceeding the peak-risk recall guardrail.",
+    "selected": "finetuned",
+    "validation_mae_improvement_percent": 0.0601,
+    "validation_recall_drop": 0.0,
+    "zero_shot_mean_validation_mae_kva": 2.0376,
+    "zero_shot_validation_high_risk_recall": 0.8485
+  },
+  "version": 1
+}

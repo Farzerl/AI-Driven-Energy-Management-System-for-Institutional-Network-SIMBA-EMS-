@@ -1,0 +1,2080 @@
+{
+  "claim_boundary": "The raw archive column labelled reactive energy is recorded in kVAR and is treated as signed reactive power. Interval reactive energy is estimated as absolute kVAR multiplied by 0.5 hours. Billing-grade reactive energy and savings require meter-register and tariff reconciliation.",
+  "dataset": {
+    "archive_files": 22,
+    "cleaned_source_rows": 255349,
+    "facilities": 22,
+    "facility_quality": {
+      "Admin": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.982508,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Agriculture 01": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.939766,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Animal House": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.777798,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Animal Vet 2": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.736758,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Art Design": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.972412,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Biological Science": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.88728,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Carr Saunders": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 2,
+        "median_power_factor": 0.915881,
+        "raw_rows": 11614,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Central Kitchens NC1 4": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 4,
+        "median_power_factor": 0.999515,
+        "raw_rows": 11612,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Crop Science": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.989176,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "EIE Maintenance Yard": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.998408,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Engineering FEBE": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.959695,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "ICT Mathematics": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.91296,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Langham 1": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 165,
+        "median_power_factor": 0.907274,
+        "raw_rows": 11451,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Langham 2": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 30,
+        "median_power_factor": 0.976068,
+        "raw_rows": 11586,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Library Rollo Drive": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.983801,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "New Hall NC5": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.998752,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "SU Building": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.997113,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Science Center": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 2,
+        "median_power_factor": 0.734447,
+        "raw_rows": 11614,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Senior Common Room": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.857042,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Swinton": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.989504,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Timber Research": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.994915,
+        "raw_rows": 11616,
+        "reactive_sign_preference": -1,
+        "retained_rows": 11616,
+        "status": "included"
+      },
+      "Vet Science": {
+        "continuous_segments": 1,
+        "grid_rows": 11616,
+        "imputed_target_rows": 0,
+        "median_power_factor": 0.765785,
+        "raw_rows": 11616,
+        "reactive_sign_preference": 1,
+        "retained_rows": 11616,
+        "status": "included"
+      }
+    },
+    "raw_columns_used": {
+      "Consumption (kWh)": "validated as approximately 0.5 \u00d7 kW and derived from forecast kW",
+      "Demand (kVA)": "past covariate and physical consistency check",
+      "Power (kW)": "active_power_kw target",
+      "Power factor": "quality comparison; operational PF is derived from kW and kVAR",
+      "Reactive energy (kVAR)": "signed reactive_power_kvar target; label/unit interpreted as reactive power",
+      "Temperature/Humidity": "reported as partial-coverage context only; not required as future covariates"
+    },
+    "regularised_rows": 255552,
+    "targets": [
+      "active_power_kw",
+      "reactive_power_kvar"
+    ],
+    "test_origins": 29,
+    "test_period": {
+      "end": "2026-04-30 23:30:00",
+      "start": "2026-04-01 00:00:00"
+    },
+    "training_period": {
+      "end": "2026-02-28 23:30:00",
+      "start": "2025-09-01 00:00:00"
+    },
+    "validation_origins": 31,
+    "validation_period": {
+      "end": "2026-03-31 23:30:00",
+      "start": "2026-03-01 00:00:00"
+    }
+  },
+  "deployment_variant": "source",
+  "generated_utc": "2026-07-28T14:21:23.222169+00:00",
+  "models": {
+    "chronos_official_base_zero_shot": {
+      "test": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 0.982,
+            "wape_percent": 8.4265
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.384,
+            "wape_percent": 9.9894
+          },
+          "power_factor": {
+            "low_pf_events": 1293,
+            "low_pf_f1": 0.8553,
+            "low_pf_precision": 0.749,
+            "low_pf_recall": 0.9969,
+            "mae": 0.032897,
+            "metric_status": "defined",
+            "p90_abs_error": 0.052033,
+            "threshold": 0.95
+          },
+          "samples": 2540
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.5709,
+              "mean_bias": -0.141,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 4.8842,
+              "p90_abs_error": 3.7575,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 12.6139,
+              "rmse": 2.7653,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4567,
+              "unit": "kW",
+              "wape_percent": 8.3147
+            },
+            "2_hours": {
+              "mae": 0.9671,
+              "mean_bias": -0.1699,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 2.978,
+              "p90_abs_error": 2.0948,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 8.0614,
+              "rmse": 2.0684,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4488,
+              "unit": "kW",
+              "wape_percent": 5.3295
+            },
+            "30_minutes": {
+              "mae": 0.6442,
+              "mean_bias": 0.0656,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 1.9861,
+              "p90_abs_error": 1.4451,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 5.2675,
+              "rmse": 1.1263,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5134,
+              "unit": "kW",
+              "wape_percent": 3.4651
+            },
+            "6_hours": {
+              "mae": 4.6738,
+              "mean_bias": 1.3117,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 5.3119,
+              "p90_abs_error": 15.3134,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 31.0566,
+              "rmse": 8.6745,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4819,
+              "unit": "kW",
+              "wape_percent": 12.4302
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.0532,
+              "mean_bias": 0.0567,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 3.7546,
+              "p90_abs_error": 2.9165,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 6.0136,
+              "rmse": 1.7601,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5701,
+              "unit": "kVAR",
+              "wape_percent": 13.8494
+            },
+            "2_hours": {
+              "mae": 0.5689,
+              "mean_bias": -0.058,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 2.0706,
+              "p90_abs_error": 1.2472,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 3.6905,
+              "rmse": 1.1364,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.474,
+              "unit": "kVAR",
+              "wape_percent": 7.5304
+            },
+            "30_minutes": {
+              "mae": 0.3882,
+              "mean_bias": 0.025,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 1.3977,
+              "p90_abs_error": 0.8368,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 2.3744,
+              "rmse": 0.7574,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5386,
+              "unit": "kVAR",
+              "wape_percent": 4.9571
+            },
+            "6_hours": {
+              "mae": 1.2851,
+              "mean_bias": 0.0107,
+              "median_latency_ms_per_facility": 1411.1855,
+              "normalised_mae_percent_of_p90_p10_range": 4.7849,
+              "p90_abs_error": 2.973,
+              "p95_latency_ms_per_facility": 1489.3769,
+              "p99_abs_error": 11.6766,
+              "rmse": 2.6145,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5134,
+              "unit": "kVAR",
+              "wape_percent": 16.5628
+            }
+          }
+        }
+      },
+      "validation": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 0.9809,
+            "wape_percent": 8.4714
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.3846,
+            "wape_percent": 10.1832
+          },
+          "power_factor": {
+            "low_pf_events": 1395,
+            "low_pf_f1": 0.84,
+            "low_pf_precision": 0.7276,
+            "low_pf_recall": 0.9935,
+            "mae": 0.036743,
+            "metric_status": "defined",
+            "p90_abs_error": 0.052763,
+            "threshold": 0.95
+          },
+          "samples": 2728
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.3532,
+              "mean_bias": -0.0306,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 4.0399,
+              "p90_abs_error": 3.0651,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 8.266,
+              "rmse": 2.3173,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4692,
+              "unit": "kW",
+              "wape_percent": 7.2838
+            },
+            "2_hours": {
+              "mae": 1.0199,
+              "mean_bias": -0.3332,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 3.1372,
+              "p90_abs_error": 2.2609,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 8.001,
+              "rmse": 2.2844,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4164,
+              "unit": "kW",
+              "wape_percent": 5.7775
+            },
+            "30_minutes": {
+              "mae": 0.7082,
+              "mean_bias": 0.0104,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 2.1062,
+              "p90_abs_error": 1.5839,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 4.5154,
+              "rmse": 1.4602,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4971,
+              "unit": "kW",
+              "wape_percent": 3.8879
+            },
+            "6_hours": {
+              "mae": 4.7663,
+              "mean_bias": 0.8784,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 5.6791,
+              "p90_abs_error": 14.228,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 37.1116,
+              "rmse": 9.3641,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4971,
+              "unit": "kW",
+              "wape_percent": 12.4805
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.0437,
+              "mean_bias": 0.045,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 3.7053,
+              "p90_abs_error": 2.4964,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 7.0067,
+              "rmse": 1.8087,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5469,
+              "unit": "kVAR",
+              "wape_percent": 13.7521
+            },
+            "2_hours": {
+              "mae": 0.5241,
+              "mean_bias": -0.0598,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 1.856,
+              "p90_abs_error": 1.2692,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 3.3279,
+              "rmse": 1.0213,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4648,
+              "unit": "kVAR",
+              "wape_percent": 7.0351
+            },
+            "30_minutes": {
+              "mae": 0.423,
+              "mean_bias": -0.0158,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 1.4669,
+              "p90_abs_error": 0.9599,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 3.1975,
+              "rmse": 0.9078,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5381,
+              "unit": "kVAR",
+              "wape_percent": 5.4709
+            },
+            "6_hours": {
+              "mae": 1.2789,
+              "mean_bias": 0.0301,
+              "median_latency_ms_per_facility": 912.071,
+              "normalised_mae_percent_of_p90_p10_range": 4.7696,
+              "p90_abs_error": 2.9569,
+              "p95_latency_ms_per_facility": 1489.5587,
+              "p99_abs_error": 13.1128,
+              "rmse": 2.5273,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4927,
+              "unit": "kVAR",
+              "wape_percent": 17.1781
+            }
+          }
+        }
+      }
+    },
+    "chronos_power_quality_lora": {
+      "test": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 0.9819,
+            "wape_percent": 8.4257
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.3838,
+            "wape_percent": 9.9847
+          },
+          "power_factor": {
+            "low_pf_events": 1293,
+            "low_pf_f1": 0.8562,
+            "low_pf_precision": 0.7503,
+            "low_pf_recall": 0.9969,
+            "mae": 0.033425,
+            "metric_status": "defined",
+            "p90_abs_error": 0.051805,
+            "threshold": 0.95
+          },
+          "samples": 2540
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.5785,
+              "mean_bias": -0.1801,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 4.9078,
+              "p90_abs_error": 3.7683,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 12.6308,
+              "rmse": 2.768,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4409,
+              "unit": "kW",
+              "wape_percent": 8.3549
+            },
+            "2_hours": {
+              "mae": 0.9846,
+              "mean_bias": -0.218,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 3.032,
+              "p90_abs_error": 2.1688,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 8.3576,
+              "rmse": 2.0984,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4346,
+              "unit": "kW",
+              "wape_percent": 5.4262
+            },
+            "30_minutes": {
+              "mae": 0.6491,
+              "mean_bias": 0.0216,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 2.0012,
+              "p90_abs_error": 1.4397,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 5.0837,
+              "rmse": 1.1265,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4992,
+              "unit": "kW",
+              "wape_percent": 3.4914
+            },
+            "6_hours": {
+              "mae": 4.643,
+              "mean_bias": 1.3211,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 5.2769,
+              "p90_abs_error": 15.2073,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 30.9876,
+              "rmse": 8.6099,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4772,
+              "unit": "kW",
+              "wape_percent": 12.3484
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.0533,
+              "mean_bias": 0.058,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 3.7549,
+              "p90_abs_error": 2.9044,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 5.9934,
+              "rmse": 1.7575,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5685,
+              "unit": "kVAR",
+              "wape_percent": 13.8506
+            },
+            "2_hours": {
+              "mae": 0.5686,
+              "mean_bias": -0.0587,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 2.0698,
+              "p90_abs_error": 1.25,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 3.6752,
+              "rmse": 1.1333,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4709,
+              "unit": "kVAR",
+              "wape_percent": 7.5273
+            },
+            "30_minutes": {
+              "mae": 0.3877,
+              "mean_bias": 0.0265,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 1.3959,
+              "p90_abs_error": 0.8389,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 2.3561,
+              "rmse": 0.7561,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5433,
+              "unit": "kVAR",
+              "wape_percent": 4.9509
+            },
+            "6_hours": {
+              "mae": 1.2832,
+              "mean_bias": 0.015,
+              "median_latency_ms_per_facility": 1520.1038,
+              "normalised_mae_percent_of_p90_p10_range": 4.7778,
+              "p90_abs_error": 2.9892,
+              "p95_latency_ms_per_facility": 3348.708,
+              "p99_abs_error": 11.6128,
+              "rmse": 2.6083,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.515,
+              "unit": "kVAR",
+              "wape_percent": 16.5381
+            }
+          }
+        }
+      },
+      "validation": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 0.9809,
+            "wape_percent": 8.4707
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.3846,
+            "wape_percent": 10.1838
+          },
+          "power_factor": {
+            "low_pf_events": 1395,
+            "low_pf_f1": 0.8396,
+            "low_pf_precision": 0.7277,
+            "low_pf_recall": 0.9921,
+            "mae": 0.03599,
+            "metric_status": "defined",
+            "p90_abs_error": 0.052422,
+            "threshold": 0.95
+          },
+          "samples": 2728
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.3596,
+              "mean_bias": -0.0702,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 4.0587,
+              "p90_abs_error": 3.1013,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 8.3629,
+              "rmse": 2.3202,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4575,
+              "unit": "kW",
+              "wape_percent": 7.3177
+            },
+            "2_hours": {
+              "mae": 1.0459,
+              "mean_bias": -0.3798,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 3.2171,
+              "p90_abs_error": 2.2669,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 8.3109,
+              "rmse": 2.3274,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4018,
+              "unit": "kW",
+              "wape_percent": 5.9246
+            },
+            "30_minutes": {
+              "mae": 0.707,
+              "mean_bias": -0.0323,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 2.1026,
+              "p90_abs_error": 1.5208,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 4.3178,
+              "rmse": 1.4676,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4809,
+              "unit": "kW",
+              "wape_percent": 3.8813
+            },
+            "6_hours": {
+              "mae": 4.7346,
+              "mean_bias": 0.8904,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 5.6414,
+              "p90_abs_error": 14.1596,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 37.0376,
+              "rmse": 9.3144,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4956,
+              "unit": "kW",
+              "wape_percent": 12.3975
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.0428,
+              "mean_bias": 0.0476,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 3.7022,
+              "p90_abs_error": 2.4774,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 7.0057,
+              "rmse": 1.8054,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5469,
+              "unit": "kVAR",
+              "wape_percent": 13.7407
+            },
+            "2_hours": {
+              "mae": 0.5259,
+              "mean_bias": -0.0607,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 1.8623,
+              "p90_abs_error": 1.2726,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 3.323,
+              "rmse": 1.023,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4648,
+              "unit": "kVAR",
+              "wape_percent": 7.059
+            },
+            "30_minutes": {
+              "mae": 0.4234,
+              "mean_bias": -0.0148,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 1.4686,
+              "p90_abs_error": 0.959,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 3.1959,
+              "rmse": 0.9078,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5455,
+              "unit": "kVAR",
+              "wape_percent": 5.4771
+            },
+            "6_hours": {
+              "mae": 1.2776,
+              "mean_bias": 0.0367,
+              "median_latency_ms_per_facility": 1515.2838,
+              "normalised_mae_percent_of_p90_p10_range": 4.7645,
+              "p90_abs_error": 2.9591,
+              "p95_latency_ms_per_facility": 1520.1903,
+              "p99_abs_error": 13.3524,
+              "rmse": 2.5308,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4956,
+              "unit": "kVAR",
+              "wape_percent": 17.1599
+            }
+          }
+        }
+      }
+    },
+    "chronos_source": {
+      "test": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 0.9811,
+            "wape_percent": 8.4191
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.3838,
+            "wape_percent": 9.9861
+          },
+          "power_factor": {
+            "low_pf_events": 1293,
+            "low_pf_f1": 0.8553,
+            "low_pf_precision": 0.749,
+            "low_pf_recall": 0.9969,
+            "mae": 0.03341,
+            "metric_status": "defined",
+            "p90_abs_error": 0.051891,
+            "threshold": 0.95
+          },
+          "samples": 2540
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.572,
+              "mean_bias": -0.1508,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 4.8875,
+              "p90_abs_error": 3.7647,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 12.575,
+              "rmse": 2.7619,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4535,
+              "unit": "kW",
+              "wape_percent": 8.3204
+            },
+            "2_hours": {
+              "mae": 0.9735,
+              "mean_bias": -0.1885,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 2.9979,
+              "p90_abs_error": 2.1204,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 8.1737,
+              "rmse": 2.0787,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4488,
+              "unit": "kW",
+              "wape_percent": 5.3652
+            },
+            "30_minutes": {
+              "mae": 0.6465,
+              "mean_bias": 0.0463,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 1.9932,
+              "p90_abs_error": 1.4477,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 5.2446,
+              "rmse": 1.1261,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5055,
+              "unit": "kW",
+              "wape_percent": 3.4775
+            },
+            "6_hours": {
+              "mae": 4.657,
+              "mean_bias": 1.3223,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 5.2928,
+              "p90_abs_error": 15.1849,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 31.0641,
+              "rmse": 8.6386,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4772,
+              "unit": "kW",
+              "wape_percent": 12.3856
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.0537,
+              "mean_bias": 0.0595,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 3.7562,
+              "p90_abs_error": 2.9203,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 5.9984,
+              "rmse": 1.7598,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5701,
+              "unit": "kVAR",
+              "wape_percent": 13.8554
+            },
+            "2_hours": {
+              "mae": 0.5683,
+              "mean_bias": -0.056,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 2.0686,
+              "p90_abs_error": 1.2445,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 3.6906,
+              "rmse": 1.1348,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4787,
+              "unit": "kVAR",
+              "wape_percent": 7.523
+            },
+            "30_minutes": {
+              "mae": 0.3877,
+              "mean_bias": 0.027,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 1.3961,
+              "p90_abs_error": 0.8409,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 2.3619,
+              "rmse": 0.7567,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5433,
+              "unit": "kVAR",
+              "wape_percent": 4.9514
+            },
+            "6_hours": {
+              "mae": 1.284,
+              "mean_bias": 0.0165,
+              "median_latency_ms_per_facility": 1008.463,
+              "normalised_mae_percent_of_p90_p10_range": 4.7805,
+              "p90_abs_error": 2.9808,
+              "p95_latency_ms_per_facility": 1038.5491,
+              "p99_abs_error": 11.6247,
+              "rmse": 2.6105,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.5134,
+              "unit": "kVAR",
+              "wape_percent": 16.5476
+            }
+          }
+        }
+      },
+      "validation": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 0.9804,
+            "wape_percent": 8.4671
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.3846,
+            "wape_percent": 10.1817
+          },
+          "power_factor": {
+            "low_pf_events": 1395,
+            "low_pf_f1": 0.84,
+            "low_pf_precision": 0.7276,
+            "low_pf_recall": 0.9935,
+            "mae": 0.03629,
+            "metric_status": "defined",
+            "p90_abs_error": 0.053039,
+            "threshold": 0.95
+          },
+          "samples": 2728
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.356,
+              "mean_bias": -0.0417,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 4.048,
+              "p90_abs_error": 3.0619,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 8.2955,
+              "rmse": 2.3193,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4648,
+              "unit": "kW",
+              "wape_percent": 7.2983
+            },
+            "2_hours": {
+              "mae": 1.0313,
+              "mean_bias": -0.3514,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 3.1722,
+              "p90_abs_error": 2.2772,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 8.145,
+              "rmse": 2.3034,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4076,
+              "unit": "kW",
+              "wape_percent": 5.8418
+            },
+            "30_minutes": {
+              "mae": 0.7074,
+              "mean_bias": -0.0087,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 2.1039,
+              "p90_abs_error": 1.5738,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 4.4197,
+              "rmse": 1.4665,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4897,
+              "unit": "kW",
+              "wape_percent": 3.8836
+            },
+            "6_hours": {
+              "mae": 4.749,
+              "mean_bias": 0.8882,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 5.6585,
+              "p90_abs_error": 14.1922,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 37.0722,
+              "rmse": 9.3365,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4956,
+              "unit": "kW",
+              "wape_percent": 12.4352
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.0433,
+              "mean_bias": 0.0481,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 3.7038,
+              "p90_abs_error": 2.4843,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 7.0044,
+              "rmse": 1.8074,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5455,
+              "unit": "kVAR",
+              "wape_percent": 13.7464
+            },
+            "2_hours": {
+              "mae": 0.5246,
+              "mean_bias": -0.0584,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 1.8578,
+              "p90_abs_error": 1.262,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 3.3294,
+              "rmse": 1.0218,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4619,
+              "unit": "kVAR",
+              "wape_percent": 7.042
+            },
+            "30_minutes": {
+              "mae": 0.423,
+              "mean_bias": -0.0141,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 1.467,
+              "p90_abs_error": 0.9538,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 3.1958,
+              "rmse": 0.9074,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5425,
+              "unit": "kVAR",
+              "wape_percent": 5.471
+            },
+            "6_hours": {
+              "mae": 1.2781,
+              "mean_bias": 0.0371,
+              "median_latency_ms_per_facility": 1007.2857,
+              "normalised_mae_percent_of_p90_p10_range": 4.7665,
+              "p90_abs_error": 2.957,
+              "p95_latency_ms_per_facility": 1031.4297,
+              "p99_abs_error": 13.1663,
+              "rmse": 2.5299,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4941,
+              "unit": "kVAR",
+              "wape_percent": 17.167
+            }
+          }
+        }
+      }
+    },
+    "seasonal_persistence": {
+      "test": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 1.1969,
+            "wape_percent": 10.2709
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.587,
+            "wape_percent": 15.2722
+          },
+          "power_factor": {
+            "low_pf_events": 1293,
+            "low_pf_f1": 0.8979,
+            "low_pf_precision": 0.8979,
+            "low_pf_recall": 0.8979,
+            "mae": 0.027659,
+            "metric_status": "defined",
+            "p90_abs_error": 0.069557,
+            "threshold": 0.95
+          },
+          "samples": 2540
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.5665,
+              "mean_bias": 0.0218,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.8703,
+              "p90_abs_error": 3.446,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 11.0554,
+              "rmse": 2.8295,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4819,
+              "unit": "kW",
+              "wape_percent": 8.2911
+            },
+            "2_hours": {
+              "mae": 1.4221,
+              "mean_bias": 0.0322,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.3792,
+              "p90_abs_error": 3.252,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 11.6874,
+              "rmse": 2.6277,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4724,
+              "unit": "kW",
+              "wape_percent": 7.8371
+            },
+            "30_minutes": {
+              "mae": 1.495,
+              "mean_bias": 0.0049,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.6094,
+              "p90_abs_error": 3.422,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 11.1312,
+              "rmse": 2.7106,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4724,
+              "unit": "kW",
+              "wape_percent": 8.0419
+            },
+            "6_hours": {
+              "mae": 5.092,
+              "mean_bias": 0.1328,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 5.7871,
+              "p90_abs_error": 14.348,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 41.6738,
+              "rmse": 9.7438,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4709,
+              "unit": "kW",
+              "wape_percent": 13.5424
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.1511,
+              "mean_bias": -0.0037,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.1035,
+              "p90_abs_error": 3.096,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 6.825,
+              "rmse": 1.9691,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4803,
+              "unit": "kVAR",
+              "wape_percent": 15.1365
+            },
+            "2_hours": {
+              "mae": 1.092,
+              "mean_bias": 0.0099,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 3.9745,
+              "p90_abs_error": 2.83,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 5.9432,
+              "rmse": 1.906,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4866,
+              "unit": "kVAR",
+              "wape_percent": 14.4545
+            },
+            "30_minutes": {
+              "mae": 1.1181,
+              "mean_bias": 0.0169,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.026,
+              "p90_abs_error": 2.906,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 6.6728,
+              "rmse": 1.93,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.4772,
+              "unit": "kVAR",
+              "wape_percent": 14.2786
+            },
+            "6_hours": {
+              "mae": 1.8387,
+              "mean_bias": 0.0173,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 6.8459,
+              "p90_abs_error": 3.818,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 17.5802,
+              "rmse": 4.1425,
+              "samples": 635,
+              "status": "defined",
+              "under_forecast_fraction": 0.515,
+              "unit": "kVAR",
+              "wape_percent": 23.6968
+            }
+          }
+        }
+      },
+      "validation": {
+        "derived": {
+          "interval_energy_kwh": {
+            "mae": 1.2207,
+            "wape_percent": 10.5415
+          },
+          "interval_reactive_energy_kvarh_estimated": {
+            "mae": 0.5977,
+            "wape_percent": 15.824
+          },
+          "power_factor": {
+            "low_pf_events": 1395,
+            "low_pf_f1": 0.8801,
+            "low_pf_precision": 0.8791,
+            "low_pf_recall": 0.881,
+            "mae": 0.033407,
+            "metric_status": "defined",
+            "p90_abs_error": 0.071628,
+            "threshold": 0.95
+          },
+          "samples": 2728
+        },
+        "targets": {
+          "active_power_kw": {
+            "24_hours": {
+              "mae": 1.4322,
+              "mean_bias": 0.0404,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.2755,
+              "p90_abs_error": 3.159,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 9.1395,
+              "rmse": 2.5526,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4927,
+              "unit": "kW",
+              "wape_percent": 7.7085
+            },
+            "2_hours": {
+              "mae": 1.5236,
+              "mean_bias": 0.036,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.6864,
+              "p90_abs_error": 3.059,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 13.8075,
+              "rmse": 3.3578,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4824,
+              "unit": "kW",
+              "wape_percent": 8.6305
+            },
+            "30_minutes": {
+              "mae": 1.4704,
+              "mean_bias": 0.0487,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 4.3732,
+              "p90_abs_error": 3.015,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 11.428,
+              "rmse": 2.9354,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5088,
+              "unit": "kW",
+              "wape_percent": 8.0726
+            },
+            "6_hours": {
+              "mae": 5.3392,
+              "mean_bias": 0.1188,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 6.3618,
+              "p90_abs_error": 16.66,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 42.1961,
+              "rmse": 10.3225,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.5088,
+              "unit": "kW",
+              "wape_percent": 13.9807
+            }
+          },
+          "reactive_power_kvar": {
+            "24_hours": {
+              "mae": 1.1064,
+              "mean_bias": 0.0069,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 3.9279,
+              "p90_abs_error": 2.566,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 7.4728,
+              "rmse": 1.9833,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4765,
+              "unit": "kVAR",
+              "wape_percent": 14.5784
+            },
+            "2_hours": {
+              "mae": 1.0902,
+              "mean_bias": 0.0169,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 3.8608,
+              "p90_abs_error": 2.666,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 7.7242,
+              "rmse": 2.147,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4809,
+              "unit": "kVAR",
+              "wape_percent": 14.6338
+            },
+            "30_minutes": {
+              "mae": 1.0867,
+              "mean_bias": 0.0074,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 3.7688,
+              "p90_abs_error": 2.478,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 7.3203,
+              "rmse": 2.1253,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4809,
+              "unit": "kVAR",
+              "wape_percent": 14.0557
+            },
+            "6_hours": {
+              "mae": 1.7788,
+              "mean_bias": -0.0203,
+              "median_latency_ms_per_facility": 0.0,
+              "normalised_mae_percent_of_p90_p10_range": 6.6339,
+              "p90_abs_error": 3.974,
+              "p95_latency_ms_per_facility": 0.0,
+              "p99_abs_error": 14.5233,
+              "rmse": 3.4174,
+              "samples": 682,
+              "status": "defined",
+              "under_forecast_fraction": 0.4985,
+              "unit": "kVAR",
+              "wape_percent": 23.8927
+            }
+          }
+        }
+      }
+    }
+  },
+  "selected_by_target_horizon": {
+    "active_power_kw": {
+      "24_hours": {
+        "chronos_weight": 0.65,
+        "model": "hybrid_chronos_seasonal",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 1.5082,
+          "mean_bias": -0.0904,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 4.689,
+          "p90_abs_error": 3.4946,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 11.2059,
+          "rmse": 2.6517,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4504,
+          "unit": "kW",
+          "wape_percent": 7.9825
+        },
+        "validation_metrics": {
+          "mae": 1.3066,
+          "mean_bias": -0.013,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 3.9006,
+          "p90_abs_error": 2.8388,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 8.4396,
+          "rmse": 2.2759,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4795,
+          "unit": "kW",
+          "wape_percent": 7.0326
+        }
+      },
+      "2_hours": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.9735,
+          "mean_bias": -0.1885,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 2.9979,
+          "p90_abs_error": 2.1204,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 8.1737,
+          "rmse": 2.0787,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4488,
+          "unit": "kW",
+          "wape_percent": 5.3652
+        },
+        "validation_metrics": {
+          "mae": 1.0313,
+          "mean_bias": -0.3514,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 3.1722,
+          "p90_abs_error": 2.2772,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 8.145,
+          "rmse": 2.3034,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4076,
+          "unit": "kW",
+          "wape_percent": 5.8418
+        }
+      },
+      "30_minutes": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.6465,
+          "mean_bias": 0.0463,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 1.9932,
+          "p90_abs_error": 1.4477,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 5.2446,
+          "rmse": 1.1261,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5055,
+          "unit": "kW",
+          "wape_percent": 3.4775
+        },
+        "validation_metrics": {
+          "mae": 0.7074,
+          "mean_bias": -0.0087,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 2.1039,
+          "p90_abs_error": 1.5738,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 4.4197,
+          "rmse": 1.4665,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4897,
+          "unit": "kW",
+          "wape_percent": 3.8836
+        }
+      },
+      "6_hours": {
+        "chronos_weight": 0.65,
+        "model": "hybrid_chronos_seasonal",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 4.4434,
+          "mean_bias": 0.906,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 5.05,
+          "p90_abs_error": 13.2219,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 30.8895,
+          "rmse": 8.2676,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4961,
+          "unit": "kW",
+          "wape_percent": 11.8175
+        },
+        "validation_metrics": {
+          "mae": 4.577,
+          "mean_bias": 0.6189,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 5.4537,
+          "p90_abs_error": 13.737,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 34.8695,
+          "rmse": 8.9919,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4941,
+          "unit": "kW",
+          "wape_percent": 11.9849
+        }
+      }
+    },
+    "reactive_power_kvar": {
+      "24_hours": {
+        "chronos_weight": 0.65,
+        "model": "hybrid_chronos_seasonal",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 1.0488,
+          "mean_bias": 0.0374,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 3.7386,
+          "p90_abs_error": 2.9802,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 5.8643,
+          "rmse": 1.7766,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5512,
+          "unit": "kVAR",
+          "wape_percent": 13.7905
+        },
+        "validation_metrics": {
+          "mae": 1.0169,
+          "mean_bias": 0.0337,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 3.61,
+          "p90_abs_error": 2.4766,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 6.7797,
+          "rmse": 1.7798,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.5264,
+          "unit": "kVAR",
+          "wape_percent": 13.3983
+        }
+      },
+      "2_hours": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.5683,
+          "mean_bias": -0.056,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 2.0686,
+          "p90_abs_error": 1.2445,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 3.6906,
+          "rmse": 1.1348,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.4787,
+          "unit": "kVAR",
+          "wape_percent": 7.523
+        },
+        "validation_metrics": {
+          "mae": 0.5246,
+          "mean_bias": -0.0584,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 1.8578,
+          "p90_abs_error": 1.262,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 3.3294,
+          "rmse": 1.0218,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4619,
+          "unit": "kVAR",
+          "wape_percent": 7.042
+        }
+      },
+      "30_minutes": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 0.3877,
+          "mean_bias": 0.027,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 1.3961,
+          "p90_abs_error": 0.8409,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 2.3619,
+          "rmse": 0.7567,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5433,
+          "unit": "kVAR",
+          "wape_percent": 4.9514
+        },
+        "validation_metrics": {
+          "mae": 0.423,
+          "mean_bias": -0.0141,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 1.467,
+          "p90_abs_error": 0.9538,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 3.1958,
+          "rmse": 0.9074,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.5425,
+          "unit": "kVAR",
+          "wape_percent": 5.471
+        }
+      },
+      "6_hours": {
+        "chronos_weight": 1.0,
+        "model": "chronos",
+        "reason": "The Chronos route improved chronological validation MAE over same-time previous-day persistence.",
+        "test_metrics": {
+          "mae": 1.284,
+          "mean_bias": 0.0165,
+          "median_latency_ms_per_facility": 1008.463,
+          "normalised_mae_percent_of_p90_p10_range": 4.7805,
+          "p90_abs_error": 2.9808,
+          "p95_latency_ms_per_facility": 1038.5491,
+          "p99_abs_error": 11.6247,
+          "rmse": 2.6105,
+          "samples": 635,
+          "status": "defined",
+          "under_forecast_fraction": 0.5134,
+          "unit": "kVAR",
+          "wape_percent": 16.5476
+        },
+        "validation_metrics": {
+          "mae": 1.2781,
+          "mean_bias": 0.0371,
+          "median_latency_ms_per_facility": 1007.2857,
+          "normalised_mae_percent_of_p90_p10_range": 4.7665,
+          "p90_abs_error": 2.957,
+          "p95_latency_ms_per_facility": 1031.4297,
+          "p99_abs_error": 13.1663,
+          "rmse": 2.5299,
+          "samples": 682,
+          "status": "defined",
+          "under_forecast_fraction": 0.4941,
+          "unit": "kVAR",
+          "wape_percent": 17.167
+        }
+      }
+    }
+  },
+  "selected_route_metrics": {
+    "test": {
+      "derived": {
+        "interval_energy_kwh": {
+          "mae": 0.9465,
+          "wape_percent": 8.1214
+        },
+        "interval_reactive_energy_kvarh_estimated": {
+          "mae": 0.3832,
+          "wape_percent": 9.9691
+        },
+        "power_factor": {
+          "low_pf_events": 1293,
+          "low_pf_f1": 0.8688,
+          "low_pf_precision": 0.7718,
+          "low_pf_recall": 0.9938,
+          "mae": 0.033359,
+          "metric_status": "defined",
+          "p90_abs_error": 0.052207,
+          "threshold": 0.95
+        },
+        "samples": 2540
+      },
+      "targets": {
+        "active_power_kw": {
+          "24_hours": {
+            "mae": 1.5082,
+            "mean_bias": -0.0904,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 4.689,
+            "p90_abs_error": 3.4946,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 11.2059,
+            "rmse": 2.6517,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.4504,
+            "unit": "kW",
+            "wape_percent": 7.9825
+          },
+          "2_hours": {
+            "mae": 0.9735,
+            "mean_bias": -0.1885,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 2.9979,
+            "p90_abs_error": 2.1204,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 8.1737,
+            "rmse": 2.0787,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.4488,
+            "unit": "kW",
+            "wape_percent": 5.3652
+          },
+          "30_minutes": {
+            "mae": 0.6465,
+            "mean_bias": 0.0463,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 1.9932,
+            "p90_abs_error": 1.4477,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 5.2446,
+            "rmse": 1.1261,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.5055,
+            "unit": "kW",
+            "wape_percent": 3.4775
+          },
+          "6_hours": {
+            "mae": 4.4434,
+            "mean_bias": 0.906,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 5.05,
+            "p90_abs_error": 13.2219,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 30.8895,
+            "rmse": 8.2676,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.4961,
+            "unit": "kW",
+            "wape_percent": 11.8175
+          }
+        },
+        "reactive_power_kvar": {
+          "24_hours": {
+            "mae": 1.0488,
+            "mean_bias": 0.0374,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 3.7386,
+            "p90_abs_error": 2.9802,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 5.8643,
+            "rmse": 1.7766,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.5512,
+            "unit": "kVAR",
+            "wape_percent": 13.7905
+          },
+          "2_hours": {
+            "mae": 0.5683,
+            "mean_bias": -0.056,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 2.0686,
+            "p90_abs_error": 1.2445,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 3.6906,
+            "rmse": 1.1348,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.4787,
+            "unit": "kVAR",
+            "wape_percent": 7.523
+          },
+          "30_minutes": {
+            "mae": 0.3877,
+            "mean_bias": 0.027,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 1.3961,
+            "p90_abs_error": 0.8409,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 2.3619,
+            "rmse": 0.7567,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.5433,
+            "unit": "kVAR",
+            "wape_percent": 4.9514
+          },
+          "6_hours": {
+            "mae": 1.284,
+            "mean_bias": 0.0165,
+            "median_latency_ms_per_facility": 1008.463,
+            "normalised_mae_percent_of_p90_p10_range": 4.7805,
+            "p90_abs_error": 2.9808,
+            "p95_latency_ms_per_facility": 1038.5491,
+            "p99_abs_error": 11.6247,
+            "rmse": 2.6105,
+            "samples": 635,
+            "status": "defined",
+            "under_forecast_fraction": 0.5134,
+            "unit": "kVAR",
+            "wape_percent": 16.5476
+          }
+        }
+      }
+    },
+    "validation": {
+      "derived": {
+        "interval_energy_kwh": {
+          "mae": 0.9528,
+          "wape_percent": 8.2281
+        },
+        "interval_reactive_energy_kvarh_estimated": {
+          "mae": 0.3816,
+          "wape_percent": 10.1047
+        },
+        "power_factor": {
+          "low_pf_events": 1395,
+          "low_pf_f1": 0.8497,
+          "low_pf_precision": 0.745,
+          "low_pf_recall": 0.9885,
+          "mae": 0.035862,
+          "metric_status": "defined",
+          "p90_abs_error": 0.054982,
+          "threshold": 0.95
+        },
+        "samples": 2728
+      },
+      "targets": {
+        "active_power_kw": {
+          "24_hours": {
+            "mae": 1.3066,
+            "mean_bias": -0.013,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 3.9006,
+            "p90_abs_error": 2.8388,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 8.4396,
+            "rmse": 2.2759,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.4795,
+            "unit": "kW",
+            "wape_percent": 7.0326
+          },
+          "2_hours": {
+            "mae": 1.0313,
+            "mean_bias": -0.3514,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 3.1722,
+            "p90_abs_error": 2.2772,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 8.145,
+            "rmse": 2.3034,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.4076,
+            "unit": "kW",
+            "wape_percent": 5.8418
+          },
+          "30_minutes": {
+            "mae": 0.7074,
+            "mean_bias": -0.0087,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 2.1039,
+            "p90_abs_error": 1.5738,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 4.4197,
+            "rmse": 1.4665,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.4897,
+            "unit": "kW",
+            "wape_percent": 3.8836
+          },
+          "6_hours": {
+            "mae": 4.577,
+            "mean_bias": 0.6189,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 5.4537,
+            "p90_abs_error": 13.737,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 34.8695,
+            "rmse": 8.9919,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.4941,
+            "unit": "kW",
+            "wape_percent": 11.9849
+          }
+        },
+        "reactive_power_kvar": {
+          "24_hours": {
+            "mae": 1.0169,
+            "mean_bias": 0.0337,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 3.61,
+            "p90_abs_error": 2.4766,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 6.7797,
+            "rmse": 1.7798,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.5264,
+            "unit": "kVAR",
+            "wape_percent": 13.3983
+          },
+          "2_hours": {
+            "mae": 0.5246,
+            "mean_bias": -0.0584,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 1.8578,
+            "p90_abs_error": 1.262,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 3.3294,
+            "rmse": 1.0218,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.4619,
+            "unit": "kVAR",
+            "wape_percent": 7.042
+          },
+          "30_minutes": {
+            "mae": 0.423,
+            "mean_bias": -0.0141,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 1.467,
+            "p90_abs_error": 0.9538,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 3.1958,
+            "rmse": 0.9074,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.5425,
+            "unit": "kVAR",
+            "wape_percent": 5.471
+          },
+          "6_hours": {
+            "mae": 1.2781,
+            "mean_bias": 0.0371,
+            "median_latency_ms_per_facility": 1007.2857,
+            "normalised_mae_percent_of_p90_p10_range": 4.7665,
+            "p90_abs_error": 2.957,
+            "p95_latency_ms_per_facility": 1031.4297,
+            "p99_abs_error": 13.1663,
+            "rmse": 2.5299,
+            "samples": 682,
+            "status": "defined",
+            "under_forecast_fraction": 0.4941,
+            "unit": "kVAR",
+            "wape_percent": 17.167
+          }
+        }
+      }
+    }
+  },
+  "status": "pass",
+  "summary": {
+    "default": "SIMBA-EMS forecasts active power and signed reactive power, then derives interval energy, reactive-energy burden and power-factor risk from physically consistent relationships.",
+    "deployment_reason": "The installed source Chronos model was retained because the power-quality LoRA model did not clear both validation and low-power-factor recall guardrails. The LoRA checkpoint and metrics remain available.",
+    "temperature_humidity_boundary": "Temperature and humidity are present for only part of the archive and are not used as mandatory future inputs until a reliable live forecast source exists.",
+    "why_two_targets": "kWh is almost exactly active kW multiplied by the half-hour interval, while power factor is physically derived from active and reactive power. Separate redundant models would add overfitting risk without adding independent information."
+  },
+  "training": {
+    "attempted": true,
+    "batch_size": 4,
+    "checkpoint_format": "merged_lora_full_model",
+    "checkpoint_path": "models/chronos-2-power-quality-finetuned",
+    "device": "cpu",
+    "duration_seconds": 1022.48,
+    "steps": 200,
+    "succeeded": true,
+    "targets": [
+      "active_power_kw",
+      "reactive_power_kvar"
+    ]
+  },
+  "variant_selection": {
+    "improvement_percent": -0.1483,
+    "lora_low_pf_recall": 0.9921,
+    "lora_normalised_validation_score": 3.3522,
+    "low_pf_recall_drop": 0.0014,
+    "maximum_recall_drop": 0.02,
+    "minimum_improvement_percent": 0.0,
+    "reason": "The installed source Chronos model was retained because the power-quality LoRA model did not clear both validation and low-power-factor recall guardrails. The LoRA checkpoint and metrics remain available.",
+    "selected": "source",
+    "source_low_pf_recall": 0.9935,
+    "source_normalised_validation_score": 3.3472
+  }
+}

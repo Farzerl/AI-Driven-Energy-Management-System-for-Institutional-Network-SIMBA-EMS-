@@ -1,0 +1,60 @@
+{
+  "available_variants": [
+    "base",
+    "finetuned"
+  ],
+  "cleanup_pending": false,
+  "completed_utc": "2026-07-28T01:05:17.947220+00:00",
+  "config_sha256": "b4bb90dcb8a6eafd06fe07a11ca78567d73eeaa1fe839a72f927382384ac0dad",
+  "dataset_zip_sha256": "0767c3b3952ad4bfd3a8d1160904b3e9cb51e5d06f909dbb814e55a6491436a0",
+  "deleted_inputs": [
+    "chronos_input/model.zip",
+    "training_data/DATA UZ ENERGY  MANAGEMENT 2026.zip"
+  ],
+  "deployment_variant": "finetuned",
+  "device": "cpu",
+  "eligible_horizons": [
+    "30_minutes",
+    "2_hours",
+    "6_hours",
+    "24_hours"
+  ],
+  "force_requested": true,
+  "inputs_deleted_utc": "2026-07-28T01:16:25.334318+00:00",
+  "model_zip_sha256": "1c5b378f005631e2daeafece67ae13a96b8183702ba7bc4df6ba48fecf7bfd21",
+  "official_base_model_sha256": "ddcda3c7508bf2528087723e98a20707cc04b7f370ae275a9fd88078ddba4f42",
+  "outputs": {
+    "base_model": "models/chronos-2-base",
+    "finetuned_model": "models/chronos-2-finetuned",
+    "metrics": "evidence/model_validation/chronos2_model_comparison.json",
+    "routing": "models/chronos2/routing.json"
+  },
+  "require_lora": true,
+  "setup_code_sha256": "c5bb6e6cf3c73d1e85fe231bcfe00be6965d7744728c324843e484a1fe311b17",
+  "setup_transaction_version": 7,
+  "started_utc": "2026-07-28T00:26:54.899957+00:00",
+  "status": "success",
+  "training": {
+    "attempted": true,
+    "batch_size": 4,
+    "checkpoint_format": "merged_lora_full_model",
+    "checkpoint_path": "models/chronos-2-finetuned",
+    "device": "cpu",
+    "duration_seconds": 502.76,
+    "steps": 200,
+    "succeeded": true
+  },
+  "variant_selection": {
+    "finetuned_mean_validation_mae_kva": 2.0364,
+    "finetuned_validation_high_risk_recall": 0.8485,
+    "horizon_wins": 3,
+    "maximum_recall_drop": 0.02,
+    "minimum_improvement_percent": 0.0,
+    "reason": "LoRA was selected because it improved mean chronological validation MAE without exceeding the peak-risk recall guardrail.",
+    "selected": "finetuned",
+    "validation_mae_improvement_percent": 0.0601,
+    "validation_recall_drop": 0.0,
+    "zero_shot_mean_validation_mae_kva": 2.0376,
+    "zero_shot_validation_high_risk_recall": 0.8485
+  }
+}

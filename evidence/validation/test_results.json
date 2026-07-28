@@ -1,0 +1,17 @@
+{
+  "generated_utc": "2026-07-26T20:31:00Z",
+  "status": "pass",
+  "automated_tests": 68,
+  "python_compilation": "pass",
+  "javascript_syntax": "pass",
+  "coverage_scope": [
+    "multi-model loading and hybrid routing",
+    "admin authentication and password handling",
+    "controlled proof-test isolation and idempotency",
+    "meter ingestion and interval validation",
+    "Gmail notification configuration",
+    "operator decision safety",
+    "simulation constraints and controller comparison",
+    "repository structure and security"
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "Admin": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.982508,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Agriculture 01": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.939766,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Animal House": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.777798,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Animal Vet 2": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.736758,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Art Design": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.972412,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Biological Science": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.88728,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Carr Saunders": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 2,
+    "median_power_factor": 0.915881,
+    "raw_rows": 11614,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Central Kitchens NC1 4": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 4,
+    "median_power_factor": 0.999515,
+    "raw_rows": 11612,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Crop Science": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.989176,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "EIE Maintenance Yard": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.998408,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Engineering FEBE": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.959695,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "ICT Mathematics": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.91296,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Langham 1": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 165,
+    "median_power_factor": 0.907274,
+    "raw_rows": 11451,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Langham 2": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 30,
+    "median_power_factor": 0.976068,
+    "raw_rows": 11586,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Library Rollo Drive": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.983801,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "New Hall NC5": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.998752,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "SU Building": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.997113,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Science Center": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 2,
+    "median_power_factor": 0.734447,
+    "raw_rows": 11614,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Senior Common Room": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.857042,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Swinton": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.989504,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Timber Research": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.994915,
+    "raw_rows": 11616,
+    "reactive_sign_preference": -1,
+    "retained_rows": 11616,
+    "status": "included"
+  },
+  "Vet Science": {
+    "continuous_segments": 1,
+    "grid_rows": 11616,
+    "imputed_target_rows": 0,
+    "median_power_factor": 0.765785,
+    "raw_rows": 11616,
+    "reactive_sign_preference": 1,
+    "retained_rows": 11616,
+    "status": "included"
+  }
+}
