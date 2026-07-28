@@ -1,0 +1,42 @@
+{
+  "model_name": "Institutional public-source planning tariff proxy",
+  "currency": "USD",
+  "privacy_boundary": "This is not a confidential institutional bill or contract tariff.",
+  "official_public_anchor": {
+    "average_end_user_tariff_usd_per_kwh": 0.1608,
+    "source": "Zimbabwe National Energy Compact, published on the ZERA website",
+    "source_url": "https://www.zera.co.zw/wp-content/uploads/simple-file-list/Resource-Assessment/Zimbabwe-Energy-compact_web.pdf",
+    "source_note": "The Compact reports an average tariff of 16.08 USc/kWh and notes that a 21% adjustment took effect on 1 December 2023."
+  },
+  "current_public_reasonableness_check": {
+    "residential_first_50_units_usd": 4.24,
+    "equivalent_usd_per_kwh": 0.0848,
+    "as_of": "2026-07-08",
+    "source_url": "https://www.zera.co.zw/",
+    "use_in_model": false,
+    "note": "Displayed by ZERA for the first 50 domestic units. It is a lower-block residential reference, not an institutional tariff."
+  },
+  "study_calibrated_planning_parameters": {
+    "demand_charge_usd_per_kva_month": 7.78,
+    "peak_energy_usd_per_kwh": 0.2173,
+    "standard_energy_usd_per_kwh": 0.115,
+    "off_peak_energy_usd_per_kwh": 0.0588,
+    "note": "These are equivalent planning rates inferred from the study's January and April cost shares. They are used for scenario comparison only."
+  },
+  "study_cost_shares": {
+    "Jan 2026": {
+      "peak_energy": 0.455,
+      "standard_energy": 0.28,
+      "off_peak_energy": 0.115,
+      "demand": 0.11,
+      "reactive": 0.04
+    },
+    "Apr 2026": {
+      "peak_energy": 0.512,
+      "standard_energy": 0.243,
+      "off_peak_energy": 0.087,
+      "demand": 0.12,
+      "reactive": 0.038
+    }
+  }
+}

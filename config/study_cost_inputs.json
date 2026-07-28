@@ -1,0 +1,70 @@
+{
+  "source_document": "Electricity Consumption Analysis and Energy Management Opportunities in Institutional Networks.pdf",
+  "study_period": "2025-09-01 to 2026-04-30",
+  "monthly_data": [
+    {
+      "month": "Sep 2025",
+      "energy_kwh": 529580,
+      "load_factor": 0.6,
+      "hours": 720
+    },
+    {
+      "month": "Oct 2025",
+      "energy_kwh": 565430,
+      "load_factor": 0.6,
+      "hours": 744
+    },
+    {
+      "month": "Nov 2025",
+      "energy_kwh": 522210,
+      "load_factor": 0.6,
+      "hours": 720
+    },
+    {
+      "month": "Dec 2025",
+      "energy_kwh": 436671,
+      "load_factor": 0.53,
+      "hours": 744
+    },
+    {
+      "month": "Jan 2026",
+      "energy_kwh": 315129,
+      "load_factor": 0.57,
+      "hours": 744
+    },
+    {
+      "month": "Feb 2026",
+      "energy_kwh": 334464,
+      "load_factor": 0.48,
+      "hours": 672
+    },
+    {
+      "month": "Mar 2026",
+      "energy_kwh": 539560,
+      "load_factor": 0.59,
+      "hours": 744
+    },
+    {
+      "month": "Apr 2026",
+      "energy_kwh": 510294,
+      "load_factor": 0.58,
+      "hours": 720
+    }
+  ],
+  "cost_breakdown_percent": {
+    "Jan 2026": {
+      "peak_energy": 45.5,
+      "standard_energy": 28.0,
+      "off_peak_energy": 11.5,
+      "demand": 11.0,
+      "reactive": 4.0
+    },
+    "Apr 2026": {
+      "peak_energy": 51.2,
+      "standard_energy": 24.3,
+      "off_peak_energy": 8.7,
+      "demand": 12.0,
+      "reactive": 3.8
+    }
+  }
+}

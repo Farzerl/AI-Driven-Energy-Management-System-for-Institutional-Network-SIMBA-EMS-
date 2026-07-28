@@ -1,0 +1,24 @@
+{
+  "status": "documented_institutional_evidence",
+  "scope_label": "Eight-month institutional smart-meter evidence base",
+  "study_period": "2025-09-01 to 2026-04-30",
+  "facility_count": 22,
+  "regularised_readings": 255552,
+  "annual_electricity_expenditure_usd": 1200000,
+  "annual_expenditure_qualifier": "more_than",
+  "active_semester_cost_breakdown_percent": {
+    "peak_energy": 51.2,
+    "demand": 12.0,
+    "reactive": 3.8
+  },
+  "peak_and_demand_cost_exposure_percent": 63.2,
+  "conservative_saving_target_percent": {
+    "minimum": 12.0,
+    "maximum": 15.0
+  },
+  "conservative_annual_saving_target_usd": {
+    "minimum": 145000,
+    "maximum": 180000
+  },
+  "claim_boundary": "The 12-15% range is a conservative project target derived from the documented cost structure. It is not a realised saving and must be verified against measured operation and invoices during an authorised pilot."
+}

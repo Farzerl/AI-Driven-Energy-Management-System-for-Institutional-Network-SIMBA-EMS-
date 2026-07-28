@@ -1,0 +1,17 @@
+column,type,required,description,example
+timestamp,datetime,yes,Half-hourly timestamp in local time,2026-04-01 08:00:00
+facility_id,string,yes,Stable facility or meter identifier,UZ_CK_NC1
+facility_name,string,yes,Human-readable facility name,Central Kitchens
+sector,string,yes,Operational sector,Catering and Hostels
+kwh,float,yes,Active energy consumed in interval,125.4
+kva,float,yes,Apparent demand or maximum demand for interval,420.1
+kvarh,float,no,Reactive energy consumed in interval,21.7
+power_factor,float,no,Average power factor for interval,0.94
+voltage_v,float,no,Average line voltage where available,400.2
+current_a,float,no,Average phase current where available,610.5
+tariff_period,string,no,Peak standard or offpeak. Can be computed from timestamp,peak
+academic_status,string,no,active semester exam recess or vacation,active_semester
+occupancy_proxy,float,no,Proxy value from schedule or known occupancy,0.85
+weather_temp_c,float,no,Ambient temperature if available,25.1
+source_meter,string,no,Original meter or platform reference,Augos_meter_001
+quality_flag,string,no,ok missing estimated or anomaly,ok

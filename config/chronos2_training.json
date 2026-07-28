@@ -1,0 +1,42 @@
+{
+  "device": "auto",
+  "prediction_length_intervals": 48,
+  "context_length_intervals": 336,
+  "quantile_levels": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "validation_stride_intervals": 48,
+  "test_stride_intervals": 48,
+  "maximum_validation_origins": 40,
+  "maximum_test_origins": 40,
+  "lora": {
+    "enabled": true,
+    "gpu_num_steps": 600,
+    "cpu_num_steps": 200,
+    "learning_rate": 1e-05,
+    "gpu_batch_size": 32,
+    "cpu_batch_size": 4,
+    "logging_steps": 25,
+    "context_length_intervals": 336,
+    "minimum_past_intervals": 96
+  },
+  "routing": {
+    "minimum_validation_mae_improvement_percent": 0.5,
+    "maximum_recall_drop": 0.02,
+    "hybrid_weight_grid": [
+      0.15,
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.75,
+      0.85
+    ],
+    "minimum_finetuned_validation_mae_improvement_percent": 0.0
+  },
+  "cleanup": {
+    "delete_input_zips_after_success": true
+  }
+}

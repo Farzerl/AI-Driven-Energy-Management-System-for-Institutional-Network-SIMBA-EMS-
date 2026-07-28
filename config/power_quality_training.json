@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "targets": [
+    "active_power_kw",
+    "reactive_power_kvar"
+  ],
+  "prediction_length_intervals": 48,
+  "context_length_intervals": 336,
+  "minimum_past_intervals": 96,
+  "validation_stride_intervals": 48,
+  "test_stride_intervals": 48,
+  "maximum_validation_origins": 40,
+  "maximum_test_origins": 40,
+  "short_gap_interpolation_limit_intervals": 6,
+  "device": "auto",
+  "cross_learning": true,
+  "inference_batch_size": 96,
+  "low_power_factor_threshold": 0.95,
+  "critical_power_factor_threshold": 0.85,
+  "lora": {
+    "enabled": true,
+    "cpu_num_steps": 200,
+    "gpu_num_steps": 600,
+    "cpu_batch_size": 4,
+    "gpu_batch_size": 32,
+    "learning_rate": 0.00001,
+    "logging_steps": 25
+  },
+  "routing": {
+    "hybrid_weight_grid": [
+      0.15,
+      0.25,
+      0.35,
+      0.5,
+      0.65,
+      0.75,
+      0.85
+    ],
+    "minimum_validation_mae_improvement_percent": 0.5,
+    "minimum_power_quality_lora_improvement_percent": 0.0,
+    "maximum_low_pf_recall_drop": 0.02
+  },
+  "cleanup": {
+    "delete_dataset_zip_after_success": true,
+    "delete_model_zip_if_extracted_after_success": true
+  },
+  "claim_boundary": "The raw archive column labelled reactive energy is recorded in kVAR and is treated as signed reactive power. Interval reactive energy is estimated as absolute kVAR multiplied by 0.5 hours. Billing-grade reactive energy and savings require meter-register and tariff reconciliation."
+}

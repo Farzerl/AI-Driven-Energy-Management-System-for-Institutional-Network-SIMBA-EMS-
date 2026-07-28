@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIMBA EMS</title>
+  <link rel="stylesheet" href="/static/app.css?v=simba-power-quality-1-estates-clarity-2">
+</head>
+<body>
+  <header class="global-nav">
+    <div class="nav-inner"><div class="brand-lockup"><span class="brand-mark"><img src="/static/assets/simba-emblem.png" alt="SIMBA-EMS logo"></span><strong>SIMBA-EMS</strong></div><span class="nav-descriptor">Institutional Energy Management</span><span id="api-status" class="status-dot">Checking system</span></div>
+  </header>
+  <div class="sub-nav">
+    <div class="sub-nav-inner"><div><strong>Institutional Energy Management</strong><span>Forecast demand, energy and power quality. Coordinate loads. Verify impact.</span></div><div class="sub-nav-actions"><span class="mode-pill">Operator-confirmed control</span><button id="menu-open" class="more-menu-button" type="button" aria-label="Customise and control SIMBA-EMS" aria-expanded="false">⋮</button></div></div>
+  </div>
+  <div id="more-menu" class="more-menu" hidden><button type="button" data-menu-action="settings">Settings</button><button type="button" data-menu-action="admin">Admin</button><button type="button" data-menu-action="about">About SIMBA-EMS</button><button type="button" data-menu-action="status">System status</button></div>
+  <nav class="tabs" aria-label="Dashboard sections">
+    <button class="tab active" data-tab="demo">Home</button>
+    <button class="tab" data-tab="live">Forecasts</button>
+    <button class="tab" data-tab="operations">Operations</button>
+    <button class="tab" data-tab="cost">Impact</button>
+    <button class="tab" data-tab="evidence">Evidence</button>
+    <button class="tab" data-tab="architecture">Architecture</button>
+  </nav>
+
+  <main>
+    <section id="demo" class="panel active">
+      <div class="hero dark-section">
+        <div class="hero-copy">
+          <div class="eyebrow">AI-ASSISTED INSTITUTIONAL ENERGY OPERATIONS</div>
+          <h1>From meter reading to a safe, verified action.</h1>
+          <p>SIMBA-EMS connects institutional meters, cleans incoming data, forecasts demand, active energy and reactive-power behaviour, explains the risk, waits for operator approval and verifies the response.</p>
+          <div class="hero-actions"><button id="refresh-client-view" class="primary-action">Refresh live state</button><button id="open-operations" class="secondary-on-dark">Review operations</button></div>
+        </div>
+        <div class="hero-proof">
+          <div><strong>≈50%</strong><span>of monthly expenditure linked to peak-period energy</span></div>
+          <div><strong>12–15%</strong><span>linked to maximum-demand charges</span></div>
+          <div><strong>22</strong><span>campus facilities in the training dataset</span></div>
+        </div>
+      </div>
+
+      <div class="section-shell">
+        <div class="section-intro"><div><span class="eyebrow">LIVE OPERATIONAL WORKFLOW</span><h2>Connect. Predict. Approve. Control. Verify.</h2><p>The AI forecasts demand, active power, reactive power and uncertainty. Engineering rules calculate only safe non-critical responses. The operator decides, then the control gateway records or dispatches the approved command.</p></div><div class="safety-note"><strong>Safety boundary</strong><span>Critical loads stay locked. Live breaker dispatch remains disabled until an authorised pilot explicitly enables it.</span></div></div>
+        <div id="home-pipeline" class="home-pipeline"><div class="pipeline-placeholder">Loading the meter-to-action path…</div></div>
+        <div class="ai-role-grid"><article><span>What the AI does</span><strong>Forecasts demand and power quality</strong><p>Predicts kVA demand, active kW and signed reactive kVAR at four horizons, then derives kWh, estimated kVARh and power-factor risk.</p></article><article><span>What engineering rules do</span><strong>Protect critical services</strong><p>Calculate the maximum safe reduction from configured deferrable and sheddable loads.</p></article><article><span>What the operator does</span><strong>Approves the response</strong><p>Approves, acknowledges or disapproves each recommendation from the dashboard approval deck.</p></article><article><span>What control does</span><strong>Dispatches and verifies</strong><p>Applies the command to the software plant or an authorised smart-breaker gateway and measures the resulting reduction.</p></article></div>
+        <div class="demo-toolbar utility-card">
+          <div class="run-context"><span>Institution status</span><strong id="client-session-label">Loading live state…</strong></div>
+          <div class="run-context"><span>Forecast engine</span><strong id="active-model-label">Automatic validated selection</strong></div>
+          <div class="toolbar-spacer"></div>
+          <button id="simulation-approve" class="approve-action" disabled>Approve recommended action</button>
+        </div>
+        <div id="simulation-kpis" class="kpi-grid"></div>
+        <div id="home-power-quality-strip" class="power-quality-home-strip"><div class="empty">Loading active-energy and power-quality outlook…</div></div>
+        <div class="section-title compact-title"><div><h2>Forecast engine <span class="help-dot" data-tooltip="The 30-minute forecast drives immediate peak decisions. The 2-hour, 6-hour and 24-hour horizons remain active for operational planning.">?</span></h2><p>Central Kitchens is highlighted because it is the largest measured contributor, while all monitored facilities remain in the campus total.</p></div></div>
+        <div id="simulation-focus-horizons" class="horizon-grid compact-horizons"></div>
+        <div class="grid demo-grid">
+          <article class="card demo-chart-card"><div class="card-heading"><h2>Institution demand <span class="help-dot" data-tooltip="The chart shows received or authorised replay demand, the response after an approved action, the forecast and the configured planning limit. Diagnostic source controls are available only in Admin.">?</span></h2><span>Observed demand, approved response, forecast and planning limit</span></div><div id="simulation-chart" class="chart tall"></div><div id="simulation-progress" class="simulation-progress"></div></article>
+          <article id="simulation-recommendation" class="card recommendation-card"></article>
+        </div>
+        <article class="card"><div class="card-heading"><h2>Monitored facilities <span class="help-dot" data-tooltip="Every monitored facility contributes to total demand. The table is sorted by forecast risk so the operator sees the most urgent facility first.">?</span></h2><span>Current demand, forecast, planning limit, protected floor and recommended reduction</span></div><div id="simulation-facilities" class="cost-table-wrap"></div></article>
+      </div>
+    </section>
+
+    <section id="overview" class="panel">
+      <div class="light-hero"><span class="eyebrow">THE CAMPUS PROBLEM</span><h1>Monitoring shows what happened. SIMBA EMS prepares what to do next.</h1><p>University demand is activity-driven. Kitchens, hostels, libraries and academic facilities overlap during expensive periods. A monthly bill arrives after the operational opportunity has passed.</p></div>
+      <div class="section-shell">
+        <div id="kpi-grid" class="kpi-grid"></div>
+        <div id="readiness-grid" class="comparison-summary readiness-grid"></div>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Held-out error by horizon</h2><span>April 2026 was not used for fitting</span></div><div id="forecast-chart" class="chart"></div></article>
+          <article class="card"><div class="card-heading"><h2>Improvement over persistence</h2><span>Same held-out April 2026 test</span></div><div id="rolling-chart" class="chart"></div></article>
+        </div>
+        <article class="statement dark-card"><h2>What the product solves</h2><p>It converts half-hourly meter readings into advance demand forecasts, peak-risk warnings, ranked non-critical load actions, operator decisions and measured scenario results. It does not replace billing meters or bypass electrical protection.</p></article>
+      </div>
+    </section>
+
+    <section id="live" class="panel">
+      <div class="light-hero"><span class="eyebrow">MULTI-HORIZON FORECAST</span><h1>Demand, energy and power quality before they become a cost.</h1><p>The deployed models predict 30 minutes, 2 hours, 6 hours and 24 hours ahead from the same authorised meter history.</p></div>
+      <div class="section-shell">
+        <div class="section-title"><div><h2>Current facility forecast outlook</h2><p>Demand forecasts protect the campus peak. The power-quality model separately forecasts active kW and signed reactive kVAR, then derives expected kWh, estimated kVARh and power factor.</p></div><button id="refresh-live" class="secondary">Refresh all forecasts</button></div>
+        <div id="live-kpis" class="kpi-grid"></div>
+        <div id="model-quality-strip" class="quality-strip"></div>
+        <div id="live-horizon-grid" class="horizon-grid"></div>
+        <div class="section-title compact-title power-quality-title"><div><span class="eyebrow">ACTIVE ENERGY AND POWER QUALITY</span><h2>Forecast electrical behaviour, not only the demand peak.</h2><p>kW and signed kVAR are forecast independently. kWh, estimated kVARh, apparent kVA and power factor are derived from the same physically consistent forecast.</p></div><span id="power-quality-status-note" class="model-state-pill">Waiting for power-quality forecast</span></div>
+        <div id="power-quality-kpis" class="kpi-grid"></div>
+        <div id="power-quality-horizon-grid" class="horizon-grid power-quality-horizons"></div>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Power-factor outlook</h2><span>Conservative PF against the 0.95 operating threshold</span></div><div id="power-quality-chart" class="chart"></div></article>
+          <article class="card"><div class="card-heading"><h2>What the forecast means</h2><span>Grounded maintenance and scheduling guidance</span></div><div id="power-quality-guidance" class="status-detail"></div></article>
+        </div>
+        <article class="card"><div class="card-heading"><h2>Facility energy and power-quality forecast</h2><span>Current kW/kVAR and forecast kWh, estimated kVARh and PF</span></div><div id="power-quality-table" class="cost-table-wrap"><div class="empty">Run TRAIN_POWER_QUALITY_FORECASTS.bat to generate the validated model and routing evidence.</div></div></article>
+        <article class="card forecast-actions-card"><div class="card-heading"><h2>Approved operational actions <span class="help-dot" data-tooltip="Every approved response remains linked to its recommendation, control command and measured demand reduction.">?</span></h2><span>Scheduled, active and completed actions</span></div><div id="live-action-summary" class="action-impact-strip"></div><div id="live-action-table" class="cost-table-wrap"><div class="empty">No action has been approved in this session.</div></div></article>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Demand outlook</h2><span>Current demand, four forecasts and facility limit</span></div><div id="live-forecast-chart" class="chart"></div></article>
+          <article class="card"><div class="card-heading"><h2>Model record</h2><span>Training and held-out test details</span></div><div id="live-model-status" class="status-detail"></div></article>
+        </div>
+        <article class="card"><div class="card-heading"><h2>Forecast history</h2><span>Every result remains traceable to a received reading</span></div><div id="live-forecast-table" class="cost-table-wrap"></div></article>
+      </div>
+    </section>
+
+    <section id="operations" class="panel">
+      <div class="light-hero operations-hero"><span class="eyebrow">ESTATES RESPONSE DESK</span><h1>Alert the manager. Keep approval inside the control room.</h1><p>High-risk demand forecasts notify the operations manager by Gmail. Emails are one-way attention signals. Confirm, defer, dismiss or mute only from this live dashboard.</p></div>
+      <div class="section-shell compact-shell">
+        <article class="approval-boundary">
+          <div><span class="eyebrow">SAFETY BOUNDARY</span><strong>External messages inform. They never approve or switch a load.</strong></div>
+          <span>Approval path: authenticated dashboard → operator log → supervised action.</span>
+        </article>
+        <div class="section-title operations-title"><div><h2>Notification channels</h2><p>Recipients are configured locally. Credentials stay outside the repository.</p></div><div class="compact-actions"><button id="process-notifications" class="secondary">Process alerts</button><button id="refresh-alerts" class="secondary">Refresh</button></div></div>
+        <div id="notification-status" class="notification-grid"></div>
+        <div class="notification-test-row"><button id="test-email" class="secondary">Test Gmail</button><span id="notification-mode-note">Dry-run is safe for the bootcamp demo.</span></div>
+        <div class="section-title queue-title"><div><h2>Action queue</h2><p>Forecast upper bounds, lead time and required reduction are shown before an operator decides.</p></div></div>
+        <div id="alert-list" class="alert-list"></div>
+        <div class="grid two compact-grid">
+          <article class="card"><div class="card-heading"><h2>Operator decisions</h2><span>Dashboard-only approvals</span></div><div id="decision-log" class="decision-log"></div></article>
+          <article class="card"><div class="card-heading"><h2>Notification delivery</h2><span>Newest event first</span></div><div id="notification-log" class="notification-log"></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cost" class="panel">
+      <div class="dark-section cost-hero"><span class="eyebrow">VERIFIED SESSION IMPACT</span><h1>Show what changed after the operator acted.</h1><p>This view uses the current replay state. It reports peak reduction, avoided limit exceedances, shifted energy and planning-cost proxies generated by approved actions.</p></div>
+      <div class="section-shell">
+        <div class="section-title"><div><h2>Approved-response impact</h2><p>Planning value is calculated immediately from the operator-approved schedule. A physical control port is not required for this estimate.</p></div><button id="refresh-cost" class="secondary">Refresh impact</button></div>
+        <div id="cost-kpis" class="kpi-grid"></div>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Approved demand plan</h2><span>Observed peak, approved-plan peak and planning limit</span></div><div id="cost-monthly-chart" class="chart"></div></article>
+          <article class="card"><div class="card-heading"><h2>Approved-response saving estimate</h2><span>Energy and demand-charge components created by the approved schedule</span></div><div id="cost-scenario-chart" class="chart"></div></article>
+        </div>
+        <article class="card power-quality-impact-card"><div class="card-heading"><h2>Power-quality opportunity</h2><span>Forecast maintenance and reactive-energy exposure</span></div><div id="impact-power-quality-opportunity" class="power-quality-opportunity"><div class="empty">Power-quality forecasts will appear after the model is trained.</div></div></article>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Approved response</h2><span>Active and scheduled non-critical load actions</span></div><div id="cost-monthly-table" class="cost-table-wrap"></div></article>
+          <article class="card"><div class="card-heading"><h2>Session context</h2><span>Controller, progress and claim boundary</span></div><div id="cost-assumptions" class="status-detail"></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence" class="panel">
+      <div class="light-hero"><span class="eyebrow">EVIDENCE</span><h1>The model starts with the campus, not a generic energy dataset.</h1><p>Eight months of half-hourly readings capture academic activity, recess periods, catering ramps, evening residential demand and facility-level technical behaviour.</p></div>
+      <div class="section-shell">
+        <article class="card institutional-case-card"><div class="card-heading"><h2>Institutional case evidence</h2><span>Documented cost pressure and conservative value opportunity</span></div><div id="institutional-case-evidence" class="institutional-case-grid"><div class="empty">Loading institutional evidence...</div></div><p id="institutional-case-boundary" class="institutional-case-boundary"></p></article>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Campus demand heatmap</h2><span>Normalized aggregate pattern</span></div><div id="heatmap-chart" class="chart tall"></div></article>
+          <article class="card"><div class="card-heading"><h2>Monthly energy index</h2><span>Period mean = 100</span></div><div id="monthly-chart" class="chart tall"></div></article>
+        </div>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Weekday and weekend profiles</h2><span>Normalized demand</span></div><div id="profile-chart" class="chart"></div></article>
+          <article class="card"><div class="card-heading"><h2>Facility concentration</h2><span>Priority targets for intervention</span></div><div id="facility-chart" class="chart"></div></article>
+        </div>
+        <article class="card"><div class="card-heading"><h2>Data quality</h2><span>Cleaning and exclusions</span></div><div id="quality-grid" class="quality-grid"></div></article>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Forecast-assisted control vs threshold rule</h2><span>Advance warnings</span></div><div id="control-chart" class="chart tall"></div></article>
+          <article class="card"><div class="card-heading"><h2>Decision trade-off</h2><span>Why the forecast is operationally useful</span></div><div id="tradeoff" class="tradeoff"></div></article>
+        </div>
+        <article class="card chronos-evidence-card power-quality-evidence-card"><div class="card-heading"><h2>Energy and power-quality forecast evidence <span class="help-dot" data-tooltip="The model forecasts active kW and signed reactive kVAR. Interval kWh, estimated kVARh and power factor are derived and cross-checked rather than trained as redundant independent targets.">?</span></h2><span id="power-quality-evidence-summary">Pending local power-quality training</span></div><div id="power-quality-evidence-table" class="model-metric-table"><div class="empty">Put one authorised UZ dataset ZIP in training_data and run TRAIN_POWER_QUALITY_FORECASTS.bat as Administrator. The existing demand model remains unchanged.</div></div></article>
+        <article class="card chronos-evidence-card"><div class="card-heading"><h2>Chronos-2 local model evidence <span class="help-dot" data-tooltip="Chronos-2 remains a challenger. It becomes the default for a horizon only when validation error improves without exceeding the permitted recall drop. Metrics are generated locally after setup.">?</span></h2><span id="chronos-evidence-summary">Pending local installation and benchmark</span></div><div id="chronos-evidence-table" class="model-metric-table"><div class="empty">Place one official Chronos-2 model ZIP in chronos_input and one authorised dataset ZIP in training_data, then run INSTALL_AND_TRAIN_CHRONOS2.bat as Administrator.</div></div></article>
+        <article class="card"><div class="card-heading"><h2>Peak-risk confusion matrix</h2><span>Low, medium and high</span></div><div id="confusion-chart" class="chart tall"></div></article>
+      </div>
+    </section>
+
+    <section id="architecture" class="panel">
+      <div class="dark-section system-hero"><span class="eyebrow">SYSTEM</span><h1>A local path from meter to decision.</h1><p>Meter readings enter through an API, remain buffered at the edge, feed the forecast model, and appear as operator-reviewed actions with a complete audit trail.</p></div>
+      <div class="section-shell">
+        <div class="section-title"><div><h2>Meter replay and edge readiness</h2><p>The same interface can later receive readings from a Raspberry Pi or approved smart meter gateway.</p></div><button id="refresh-edge" class="secondary">Refresh status</button></div>
+        <div id="edge-kpis" class="kpi-grid edge-kpis"></div>
+        <div class="grid two">
+          <article class="card"><div class="card-heading"><h2>Gateway status</h2><span>Validation, buffering and retry</span></div><div id="edge-status-detail" class="status-detail"></div></article>
+          <article class="card"><div class="card-heading"><h2>Latest readings</h2><span>Authorised historical replay</span></div><div id="edge-readings" class="edge-readings"></div></article>
+        </div>
+        <div class="grid two">
+          <article class="card diagram-card"><div class="card-heading"><h2>System architecture</h2><span>Current demonstration and pilot path</span></div><img src="/diagrams/system_architecture.svg" alt="System architecture diagram"></article>
+          <article class="card diagram-card"><div class="card-heading"><h2>Data flow</h2><span>Meter, model, operator and audit trail</span></div><img src="/diagrams/data_flow.svg" alt="Data flow diagram"></article>
+        </div>
+        <article class="card architecture-layers-card"><div class="card-heading"><h2>Ordered technical layers</h2><span>Every layer has a clear responsibility and persistent record</span></div><div class="architecture-stack"><div><b>01</b><strong>Meter and device layer</strong><span>Billing meters, submeters, STM32 sensing and equipment-state inputs.</span></div><div><b>02</b><strong>Edge gateway</strong><span>Raspberry Pi validation, timestamp alignment, deduplication and offline buffer.</span></div><div><b>03</b><strong>Secure ingestion API</strong><span>Authenticated FastAPI endpoints, schema checks and defensive error handling.</span></div><div><b>04</b><strong>Operational data platform</strong><span>Time-series readings, feature store, quality flags and facility metadata.</span></div><div><b>05</b><strong>Forecast and uncertainty service</strong><span>HGB, LSTM, Transformer and Chronos-2 routes for kVA, kW and kVAR.</span></div><div><b>06</b><strong>Risk and engineering rules</strong><span>Peak/PF risk, tariff logic, critical-load exclusions and safe controllability limits.</span></div><div><b>07</b><strong>Operator decision layer</strong><span>Gmail attention alerts, approval deck, identity, idempotency and decision log.</span></div><div><b>08</b><strong>Control and verification layer</strong><span>Software plant or authorised gateway, command acknowledgement, impact and audit database.</span></div></div></article>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title">
+    <form method="dialog" class="settings-shell" novalidate>
+      <div class="settings-header"><div><span class="eyebrow">OPERATOR SETTINGS</span><h2 id="settings-title">Notifications</h2><p>Configure Gmail alerts and recipients. Technical controls remain in Admin.</p></div><button class="settings-close" value="cancel" aria-label="Close settings">×</button></div>
+      <section class="settings-section"><div class="settings-section-head"><div><h3>Email alert policy</h3><p>Choose when the operations team receives an attention message.</p></div></div><div class="settings-grid settings-basics"><label>Delivery mode<select id="setting-mode"><option value="disabled">Disabled</option><option value="dry_run">Dry run</option><option value="live">Live delivery</option></select></label><label>Minimum alert risk<select id="setting-min-risk"><option value="high">High only</option><option value="medium">Medium and high</option></select></label><label>Cooldown, minutes<input id="setting-cooldown" type="number" min="0" max="1440" step="1"></label><label>Delivery attempts<input id="setting-attempts" type="number" min="1" max="5" step="1"></label><label>Dashboard URL<input id="setting-dashboard-url" type="url" autocomplete="off"></label></div></section>
+      <section class="settings-section"><div class="settings-section-head"><div><h3>Gmail alerts</h3><p>One sender can notify any number of enabled recipients.</p></div><label class="switch-row"><input id="setting-email-enabled" type="checkbox"> Enabled</label></div><div class="settings-grid"><label>Gmail sender<input id="setting-gmail-user" type="email" autocomplete="username" placeholder="alerts@example.com"></label><label>Gmail app password<input id="setting-gmail-password" type="password" autocomplete="new-password" placeholder="Leave blank to keep stored password"></label><label>SMTP host<input id="setting-gmail-host" type="text" value="smtp.gmail.com"></label><label>SMTP port<select id="setting-gmail-port"><option value="465">465</option><option value="587">587</option></select></label><label>Security<select id="setting-gmail-security"><option value="ssl">SSL</option><option value="starttls">TLS / STARTTLS</option></select></label></div><div id="gmail-config-status" class="settings-result" role="status">Use port 465 with SSL, or port 587 with STARTTLS.</div><div class="recipient-head"><strong>Email recipients</strong><button id="add-email-recipient" class="text-action" type="button">Add recipient</button></div><div id="email-recipient-list" class="recipient-list"></div></section>
+      <section class="settings-test-panel"><div><h3>Test delivery</h3><p>Save, select one recipient and send a dry-run or live test.</p></div><div class="settings-test-controls"><label>Email target<select id="test-email-target"></select></label><button id="settings-test-email" class="secondary" type="button">Send email test</button></div><div id="settings-test-result" class="settings-result" role="status"></div></section>
+      <div class="settings-footer"><span id="settings-save-status">No unsaved changes.</span><div><button class="secondary" type="button" id="settings-cancel">Cancel</button><button id="settings-save" class="primary-action" type="button">Save settings</button></div></div>
+    </form>
+  </dialog>
+
+  <dialog id="admin-login-dialog" class="compact-dialog" aria-labelledby="admin-login-title"><form method="dialog" novalidate><div class="settings-header"><div><span class="eyebrow">RESTRICTED CONFIGURATION</span><h2 id="admin-login-title">Admin access</h2><p>Temporary default password: admin. Change it after first access.</p></div><button class="settings-close" value="cancel" aria-label="Close">×</button></div><div class="dialog-body"><label class="field-label">Admin password<input id="admin-login-password" type="password" autocomplete="current-password"></label><div id="admin-login-result" class="settings-result"></div></div><div class="settings-footer"><span>Session expires after one hour.</span><div><button id="admin-login-cancel" class="secondary" type="button">Cancel</button><button id="admin-login-submit" class="primary-action" type="button">Continue</button></div></div></form></dialog>
+
+  <dialog id="admin-dialog" class="settings-dialog admin-dialog" aria-labelledby="admin-title"><form method="dialog" class="settings-shell" novalidate><div class="settings-header"><div><span class="eyebrow">ADMIN AND DIAGNOSTICS</span><h2 id="admin-title">System configuration</h2><p>Configure models, diagnostic replay and controlled proof tests. These values are hidden from the operator view.</p></div><button class="settings-close" value="cancel" aria-label="Close admin">×</button></div>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Forecast model</h3><p>Automatic mode selects the best validated model or hybrid for each horizon.</p></div></div><div class="settings-grid"><label>Runtime selection<select id="admin-model-mode"><option value="automatic">Automatic validated selection</option><option value="gradient_boosting">Gradient boosting</option><option value="lstm">LSTM</option><option value="transformer">Transformer</option><option value="hybrid_gb_lstm">Gradient boosting + LSTM</option><option value="hybrid_gb_transformer">Gradient boosting + Transformer</option><option value="hybrid_lstm_transformer">LSTM + Transformer</option><option value="hybrid_all">All three models</option><option value="chronos2">Chronos-2</option><option value="hybrid_chronos_existing">Validated route + Chronos-2</option></select></label></div><div id="admin-model-status" class="settings-result"></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Chronos-2 local forecasting</h3><p>Optional local foundation-model challenger, fine-tuned and benchmarked inside this repository without Ollama.</p></div><button id="admin-chronos-refresh" class="secondary" type="button">Refresh status</button></div><div id="admin-chronos-status" class="chronos-status-grid"><div class="empty">Run INSTALL_AND_TRAIN_CHRONOS2.bat after placing the model ZIP and dataset ZIP in their input folders.</div></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Energy and power-quality forecasting</h3><p>Separate local Chronos-2 adaptation for active kW and signed reactive kVAR. Derived kWh, estimated kVARh and power factor remain physically consistent.</p></div><button id="admin-power-quality-refresh" class="secondary" type="button">Refresh status</button></div><div id="admin-power-quality-status" class="chronos-status-grid"><div class="empty">Place one authorised dataset ZIP in training_data and run TRAIN_POWER_QUALITY_FORECASTS.bat.</div></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Diagnostic replay</h3><p>Controls the authorised software-in-the-loop environment used for troubleshooting and demonstration.</p></div></div><div class="settings-grid"><label>Scenario<select id="setting-simulation-scenario"></select></label><label>Controller<select id="setting-simulation-controller"><option value="ai_assisted">Forecast-assisted</option><option value="simple_rule">Current-demand rule</option><option value="manual">Manual operator</option><option value="no_control">No control</option></select></label><label>Seconds per 30-minute interval<input id="setting-playback-seconds" type="number" min="0.5" max="30" step="0.5" value="10"></label><label class="switch-row settings-switch"><input id="setting-pause-recommendation" type="checkbox"> Pause replay for each recommendation</label><label class="switch-row settings-switch"><input id="setting-auto-start" type="checkbox"> Start replay automatically with SIMBA-EMS</label><label class="switch-row settings-switch"><input id="setting-auto-compare" type="checkbox"> Run comparison on load</label></div><div class="admin-run-actions"><button id="admin-run-reset" class="secondary" type="button">Reset replay</button><button id="admin-run-step" class="secondary" type="button">Advance one interval</button><button id="admin-run-auto" class="primary-action" type="button">Start automatic replay</button><button id="admin-run-compare" class="secondary" type="button">Compare controllers</button></div><div id="admin-run-status" class="settings-result"></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Controlled proof test <span class="help-dot" data-tooltip="The four values replace only the latest four readings in an isolated 49-reading context. They are marked manual_test and cannot update calibration, production history, official metrics or savings.">?</span></h3><p>Use four new half-hour values to prove forecasts and risk decisions are computed rather than hardcoded.</p></div></div><div class="settings-grid"><label>Facility<select id="admin-test-facility"></select></label><label>Model mode<select id="admin-test-model"><option value="automatic">Automatic</option><option value="gradient_boosting">Gradient boosting</option><option value="lstm">LSTM</option><option value="transformer">Transformer</option><option value="hybrid_all">All three hybrid</option><option value="chronos2">Chronos-2</option><option value="hybrid_chronos_existing">Validated route + Chronos-2</option></select></label><label>Reading 1, kVA<input id="admin-test-1" type="number" min="0" step="0.1"></label><label>Reading 2, kVA<input id="admin-test-2" type="number" min="0" step="0.1"></label><label>Reading 3, kVA<input id="admin-test-3" type="number" min="0" step="0.1"></label><label>Reading 4, kVA<input id="admin-test-4" type="number" min="0" step="0.1"></label></div><button id="admin-test-run" class="primary-action" type="button">Run isolated proof test</button><div id="admin-test-result" class="admin-test-result"></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Adaptive calibration</h3><p>Verified measured readings may update bounded residual correction. Test and replay values are excluded.</p></div><label class="switch-row"><input id="setting-adaptive-enabled" type="checkbox"> Enabled</label></div><div class="settings-grid"><label>Minimum observations<input id="setting-adaptive-min" type="number" min="4" max="96"></label><label>Correction gain<input id="setting-adaptive-gain" type="number" min="0" max="1" step="0.05"></label><label>Maximum correction, % of limit<input id="setting-adaptive-cap" type="number" min="0" max="15" step="0.5"></label><label>Residual window<input id="setting-adaptive-window" type="number" min="48" max="1000"></label><label>Retraining review interval<input id="setting-retrain-interval" type="number" min="96" max="10000" step="48"></label></div><div id="adaptive-config-status" class="settings-result"></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Operational guardrails <span class="help-dot" data-tooltip="Validated overrides are applied at runtime without changing the source scenario or trained model. Leave override maps empty to use measured defaults.">?</span></h3><p>Advanced limits, risk thresholds and planning tariff rates. Invalid values are rejected explicitly.</p></div></div><label class="field-label">Validated JSON configuration<textarea id="admin-operational-json" class="admin-json-editor" rows="13" spellcheck="false"></textarea></label><div class="admin-run-actions"><button id="admin-guardrails-default" class="secondary" type="button">Load safe defaults</button><button id="admin-diagnostics-refresh" class="secondary" type="button">Refresh diagnostics</button></div><div id="admin-diagnostics-result" class="diagnostics-output"></div></section>
+    <section class="settings-section"><div class="settings-section-head"><div><h3>Admin password</h3><p>Replace the temporary password. Passwords are salted and hashed locally.</p></div></div><div class="settings-grid"><label>Current password<input id="admin-current-password" type="password"></label><label>New password<input id="admin-new-password" type="password" minlength="8"></label></div><button id="admin-password-change" class="secondary" type="button">Change password</button><div id="admin-password-result" class="settings-result"></div></section>
+    <div class="settings-footer"><span id="admin-save-status">No unsaved changes.</span><div><button id="admin-logout" class="secondary" type="button">Log out</button><button id="admin-save" class="primary-action" type="button">Save admin settings</button></div></div></form></dialog>
+
+  <dialog id="about-dialog" class="settings-dialog about-dialog" aria-labelledby="about-title"><form method="dialog" class="settings-shell"><div class="settings-header"><div><span class="eyebrow">PRODUCT AND VALIDATION</span><h2 id="about-title">About SIMBA-EMS</h2><p>Functionality, model evidence, architecture and claim boundaries.</p></div><button class="settings-close" value="cancel" aria-label="Close about">×</button></div><div id="about-content" class="about-content"></div></form></dialog>
+
+  <dialog id="status-dialog" class="compact-dialog" aria-labelledby="status-title"><form method="dialog"><div class="settings-header"><div><span class="eyebrow">SYSTEM HEALTH</span><h2 id="status-title">Runtime status</h2><p>Backend, models, email and data stores.</p></div><button class="settings-close" value="cancel" aria-label="Close status">×</button></div><div id="status-content" class="dialog-body"></div></form></dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/app.js?v=simba-power-quality-1-estates-clarity-2"></script>
+</body>
+</html>

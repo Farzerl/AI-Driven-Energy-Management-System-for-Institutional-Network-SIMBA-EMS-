@@ -1,0 +1,12 @@
+{
+  "gateway_id": "uz-meter-replay-01",
+  "facility_id": "Central Kitchens NC1 4",
+  "server_url": "http://127.0.0.1:8000",
+  "poll_interval_seconds": 2,
+  "batch_size": 64,
+  "buffer_path": "runtime/edge_buffer.jsonl",
+  "status_path": "runtime/edge_status.json",
+  "source_csv": "sample_data/edge_demo_readings.csv",
+  "api_key": null,
+  "accelerated_demo": false
+}
